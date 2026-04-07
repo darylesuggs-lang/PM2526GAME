@@ -1,26 +1,32 @@
 :root {
-    --dialogue-border-color: #ffd69c;
-    --dialogue-bg-color: #211510;
-    --dialogue-name-bg-color: #35251c;
-    --dialogue-text-color: #fff;
+    --dialogue-border-color: #472d30;
+    --dialogue-bg-color: #723d46;
+    --dialogue-name-bg-color: #e26d5c;
+    --dialogue-text-color: #ffe1a8;
+    --dialogue-image-background-color: #aa5551;
 
     --dialogue-name-font: 'Pixelify Sans', serif;
     --dialogue-text-font: 'Pixelify Sans', sans-serif;
 }
+
+
 .dialogue-box {
     position: fixed;
+    left: 50%;
+    bottom: 1rem;
     display: flex;
     flex-direction: row;
+    transform: translate(-50%, 0);
 }
 .dialogue-box .portrait {
     width: 15rem;
     height: 15rem;
     border: var(--dialogue-border-color) 8px solid;
-    background-color: var(--dialogue-bg-color);
+    background-color: var(--dialogue-image-background-color);
 }
 .dialogue-box .portrait img {
-    width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 .dialogue-box .right {
@@ -39,6 +45,7 @@
     background-color: var(--dialogue-name-bg-color);
     color: var(--dialogue-text-color);
     border: var(--dialogue-border-color) 4px solid;
+    text-shadow: -3px 3px 0 var(--dialogue-border-color);
 }
 .dialogue-box .text {
     font-family: var(--dialogue-text-font);
