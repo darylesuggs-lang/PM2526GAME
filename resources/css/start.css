@@ -1,13 +1,27 @@
-h1{
-    text-align: center;
-    font-size: 3em;
+body {
+    background-color: #f6e1b5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 
-html{
-   background-color:#f6e1b5 ;
-
+h1 {
+    font-size: 6.5rem;
+    margin-left: 60%;
+    color: #936535;
+    display: flex;
+    text-align: center;
+     width: 100%;
+     border: 0.15em double #904a00;
+    outline: 0.05em solid #d9c22e;
+    padding: 0.4em;
 }
 
 button{
-    text-align: center;
+padding: 0.625rem 1.25rem;    
+font-size: 1.2rem;
+
 }
