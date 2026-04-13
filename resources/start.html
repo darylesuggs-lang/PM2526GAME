@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/start.css">
     <title>Game Name</title>
 </head>
+
 <body>
-<h1>Game Name</h1>
-<button id="startButton">Start Game</button>
- 
+    <div id="name_container">
+        <img src="./images/Steampunk.png" alt="Border" id="border">
+        <div id="title">
+            <h1>Game Name</h1>
+        </div>
+    </div>
+    <div id="gear_container">
+        <div class="gear"></div>
+        <button id="startButton">Start Game</button>
+        <div class="gear"></div>
+    </div>
+    <script>
+        document.getElementById('startButton').addEventListener('click', function () {
+            window.location.href = 'main.html';
+        });
+    </script>
 </body>
+
 </html>

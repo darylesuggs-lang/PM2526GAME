@@ -3,25 +3,57 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     height: 100vh;
     margin: 0;
 }
-
+/*name settings*/
 h1 {
     font-size: 6.5rem;
-    margin-left: 60%;
     color: #936535;
     display: flex;
     text-align: center;
-     width: 100%;
-     border: 0.15em double #904a00;
-    outline: 0.05em solid #d9c22e;
-    padding: 0.4em;
+    width: 100%;
+    margin-bottom: 10%;
+}
+#name_container {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    margin: 10%;
+}
+#title {
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+#gear_container{
+    height: 40%;
+    width: 40%;
+    display: flex;
+    background-color: white;
 }
 
-button{
-padding: 0.625rem 1.25rem;    
-font-size: 1.2rem;
+/*button settings*/
 
+button {
+    padding: 0.625rem 1.25rem;
+    font-size: 1.2rem;
+    background-color: #936535;
+    color: #f6e1b5;
+    border: dashed;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    height: 75%;
+    width: 75%;
 }
+
+button:hover {
+    box-shadow: 0 0.5rem 1rem 0 #904a00, 0 0.4rem 1.25rem 0 #904a00;
+    transform: translateY(-2px);
+}
+
+
