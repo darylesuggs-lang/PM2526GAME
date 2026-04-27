@@ -200,37 +200,4 @@ export default class Dialogue {
     // - "options" - array of options the player can choose from
     //               (each with "text" and a required "response" that is revealed when the option is chosen)
 
-// dialogue json format example:
-// {
-//     "1": {
-//         "prompt": "Hi! I'm Bejamin Netanyahu."
-//     },
-//     "2": {   
-//         "prompt": "I'm also your boss.",
-//         "options": [
-//             {
-//                 "text": "Ok cool",
-//                 "response": "Great! Now make potions for me."
-//             },
-//             {
-//                 "text": "No you aren't dude",
-//                 "response": "Well unfortunately for you my friend, you don't have a choice in this matter.  You WILL make potions for me."
-//             }
-//         ]
-//     },
-//     "3": {
-//         "options": [
-//             {
-//                 "text": "Sure thing boss",
-//                 "response": "Thats the spirit!"
-//             },
-//             {
-//                 "text": "I dont wanna do that",
-//                 "response": "I really dont care what you wanna do, just make the potions."
-//             }
-//         ]
-//     },
-//     "4": {
-//         "prompt": "Anyway, I have to go now. See you later!  And remember, make those potions real good for me, or else..."
-//     }
-// }
+// dialogue json format example is in dialogue/template_yahu_dialogue.json

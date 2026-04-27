@@ -1,0 +1,54 @@
+// every added character needs to be added to character_files below
+const character_files = [
+    "bart_simpson.json",
+    "cardinal.json",
+    "forwolk_q_splont.json",
+    "god.json",
+    "goffer.json",
+    "jennifer_marie_whitmer.json",
+    "john_b_politics.json",
+    "kronk.json",
+    "rue_t_whirl.json",
+    "shirley_z_morgan.json",
+    "stephen_m_spectre.json",
+    "sugoi_kawaii_johnson.json"
+]
+
+// character contianer class to store all character jsons and provide functions to access them
+class CharacterContainer {
+    constructor() {
+        this._characters = {};
+    }
+
+    add_character(character_json) {
+        this._characters[character_json.name] = character_json;
+    }
+
+    get_character(name) {
+        return this._characters[name];
+    }
+
+    get_all_characters() {
+        return Object.values(this._characters);
+    }
+
+    get_all_character_names() {
+        return Object.keys(this._characters);
+    }
+}
+const character_container = new CharacterContainer();
+
+
+// load all the story/character/ json files into the character container
+for (const file of character_files) {
+    const response = await fetch("../resources/jsons/characters/" + file); 
+    if (!response.ok) {
+        throw new Error(`Error fetching character JSON: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    character_container.add_character(data);
+}
+
+export default character_container;
+

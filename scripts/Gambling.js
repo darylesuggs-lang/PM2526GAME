@@ -14,7 +14,7 @@ const rollSlot = () => {
             return "CHERRY";
         case inRange(symbolID, 12, 24): // 12
             return "BELL";
-        case inRange(symbolID, 25, 100): // 75 / 3 = 25 for each
+        case inRange(symbolID, 25 , 100): // 75 / 3 = 25 for each
             switch (Math.floor(Math.random() * 3) + 1) {
                 case 1:
                     return "LEMON";
@@ -33,8 +33,8 @@ const rollSlot = () => {
 
 const spinSlots = (numberOfRolls, betAmount) => {
     const SYMBOL_MULTIPLIERS = {
-        "SEVEN": 50, "BAR": 20, "CHERRY": 10,
-        "BELL": 5, "LEMON": 2, "ORANGE": 2, "GRAPE": 2
+        "SEVEN": 500, "BAR": 200, "CHERRY": 100,
+        "BELL": 50, "LEMON": 5, "ORANGE": 5, "GRAPE": 5
     };
 
     let slotRolls = Array.from({ length: numberOfRolls }, () => rollSlot());
@@ -94,7 +94,7 @@ while (!jackpot) {
     console.log(spin);
     console.log(iterationCount);
 
-    if (spin === betAmount * 50) {
+    if (spin === betAmount * 5) {
         jackpot = true;
     };
 }
