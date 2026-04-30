@@ -6,5 +6,5 @@ import template_yahu_dialogue from "../resources/jsons/dialogue/template_yahu_di
 console.log("All Characters Loaded:")
 console.log(CharacterContainer.get_all_characters())
 
-const yahu_dialogue = new Dialogue("Benjamin Netanyahu", "../resources/images/netanyahu.png");
+const yahu_dialogue = new Dialogue("Benjamin Netanyahu", "./resources/images/netanyahu.png");
 await yahu_dialogue.conversation(template_yahu_dialogue);
