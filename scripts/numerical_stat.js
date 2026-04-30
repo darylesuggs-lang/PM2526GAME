@@ -1,4 +1,4 @@
-export default class numerical_stat {
+export default class NumericalStat {
     constructor(name, initial_value) {
         this._name = name;
         this._value = initial_value;
