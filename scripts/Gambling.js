@@ -78,7 +78,6 @@ const spinSlots = (numberOfRolls, betAmount) => {
         totalPayout += reward;
         
     }
-
     return totalPayout;
 }
 
