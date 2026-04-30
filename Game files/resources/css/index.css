@@ -86,8 +86,7 @@ p {
 #shop {
   position: absolute;
   top: 1%;
-  left: 45%;
-
+  left: 48%;
   opacity: 0.75;
 }
 
@@ -136,17 +135,28 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   overflow: hidden;
+  background-color: #0090c8;
 }
 
 .slot {
   width: 17%;
-  height: auto;
-  aspect-ratio: 1/1;
-  border: 1px solid #3e3f40;
-  overflow: hidden;
+  aspect-ratio: 1 / 1;
   align-self: start;
+  overflow: hidden;
   background-color: #936535;
+  background: linear-gradient(145deg, #a6723c, #845b30); 
+  border: 2px solid #3e3f40;
+  border-radius: 8px; 
+  box-shadow: 
+  inset 4px 4px 8px rgba(0, 0, 0, 0.3),  2px 2px 5px rgba(0, 0, 0, 0.2);        
+  transition: transform 0.2s ease;
 }
+
+.slot:hover {
+  transform: scale(1.05);
+  border-color: #f3ab5d; 
+}
+
 
 #first_section button:hover {
   background-color: #d9c22e;
@@ -300,7 +310,6 @@ p {
 #controls {
   width: 100%;
   height: 34%;
-  border: 1px solid #3e3f40;
   display: flex;
 
 }
@@ -316,13 +325,15 @@ p {
   height: 40%;
   display: flex;
   justify-content: center;
+
 }
+
 
 #control_buttons {
   display: flex;
   width: 100%;
   height: 59%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
   background-color:  #3e3f40;
@@ -356,10 +367,10 @@ p {
 
 #play {
   background-color: #549584;
-  ;
-  border: 1px solid #3e3f40;
+  border: 3px solid #3e3f40;
   width: 24%;
   height: 100%;
+    margin-left: .5%;
 }
 
 #play_button {
