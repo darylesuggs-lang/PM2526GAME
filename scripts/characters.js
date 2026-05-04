@@ -35,20 +35,20 @@ class CharacterContainer {
     get_all_character_names() {
         return Object.keys(this._characters);
     }
-}
-const character_container = new CharacterContainer();
 
-
-// load all the story/character/ json files into the character container
-for (const file of character_files) {
-    const response = await fetch("../resources/jsons/characters/" + file); 
-    if (!response.ok) {
-        throw new Error(`Error fetching character JSON: ${response.status} ${response.statusText}`);
+    load_characters() {
+        // load all the story/character/ json files into the character container
+        for (const file of character_files) {
+            const response = await fetch("../resources/jsons/characters/" + file); 
+            if (!response.ok) {
+                throw new Error(`Error fetching character JSON: ${response.status} ${response.statusText}`);
+            }
+        
+            const data = await response.json();
+            data.love = 1
+            character_container.add_character(data);
+        }
     }
-
-    const data = await response.json();
-    data.love = 1
-    character_container.add_character(data);
 }
 
 export default character_container;
