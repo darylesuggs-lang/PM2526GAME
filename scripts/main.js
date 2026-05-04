@@ -15,11 +15,5 @@ async function main() {
     SceneManager.change_scene(SceneManager.get_scene("Main Menu"));
 }
 
-// start button
-// goes into yahu into scene
-document.querySelector("#start_button").addEventListener("click", () => {
-    SceneManager.change_scene(SceneManager.get_scene("Yahu Intro"));
-});
-
 
 main();
