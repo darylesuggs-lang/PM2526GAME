@@ -1,10 +1,10 @@
-import numerical_stat from "./numerical_stat";
+import NumericalStat from "./NumericalStat";
 
 const stats = {
-    money: new numerical_stat("money", 100),
-    schizophrenia: new numerical_stat("schizophrenia", 0),
-    gambling_anxiety: new numerical_stat("gambling_anxiety", 0),
-    netneyau_rage_love: new numerical_stat("netneyau_rage_love", 0)
+    money: new NumericalStat("money", 100),
+    schizophrenia: new NumericalStat("schizophrenia", 0),
+    gambling_anxiety: new NumericalStat("gambling_anxiety", 0),
+    netneyau_rage_love: new NumericalStat("netneyau_rage_love", 0)
 }
 
 /*
