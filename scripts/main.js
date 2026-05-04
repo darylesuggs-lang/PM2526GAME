@@ -1,18 +1,25 @@
-import Dialogue from "./dialogue.js";
-import CharacterContainer from "./characters.js";    
-import template_yahu_dialogue from "../resources/jsons/dialogue/template_yahu_dialogue.json" with {type: "json"};
+import {character_files} from "./characters.js";    
 import {SceneManager} from "./scene_manager.js";
+import {character_container, dialogue_manager} from "./globals.js";
+import {dialogue_list} from "./dialogue.js";
 
 
-async function main() {
-    const character_container = new CharacterContainer();
-    await character_container.load_characters();
+async function main() { 
+    await character_container.load_characters(character_files);
+    await dialogue_manager.load_characters(character_files);
+    await dialogue_manager.load_dialogues(dialogue_list);
+
     console.log(character_container.get_all_characters())
+    console.log(dialogue_manager.get_all_dialogues())
 
     SceneManager.change_scene(SceneManager.get_scene("Main Menu"));
-
-    const yahu_dialogue = new Dialogue("Benjamin Netanyahu", "./resources/images/netanyahu.png");
-    await yahu_dialogue.conversation(template_yahu_dialogue);
 }
+
+// start button
+// goes into yahu into scene
+document.querySelector("#start_button").addEventListener("click", () => {
+    SceneManager.change_scene(SceneManager.get_scene("Yahu Intro"));
+});
+
 
 main();
