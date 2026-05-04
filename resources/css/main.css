@@ -11,18 +11,27 @@ body {
     background-color: #f6e1b5;
     display: flex;
     flex-wrap: wrap;
-
+    width: 100vw;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
+}
+
+#frame {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
 }
 
 header {
     width: 100%;
     height: 10%;
-    border: 1px solid black;
+    padding: 1%;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 }
 
 header h1 {
@@ -31,23 +40,26 @@ header h1 {
     text-align: center;
     width: 100%;
     margin: 0;
-    font-family: Jack Of Gears, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+    font-family: Jack Of Gears, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 #game_area_main {
     width: 100%;
     height: 89%;
-    border: 1px solid black;
+
     display: flex;
+    z-index: 10;
 }
 
 #game_area1 {
     width: 5%;
     height: 100%;
-    border: 1px solid black;
+
+
 }
 
 #game_area2 {
-    width: 90%;
+    width: 89%;
     height: 100%;
     border: 1px solid black;
     display: flex;
@@ -59,7 +71,7 @@ header h1 {
 #game_area3 {
     width: 5%;
     height: 100%;
-    border: 1px solid black;
+
 }
 
 #main_game_bg_area {
@@ -84,4 +96,29 @@ header h1 {
     width: 25%;
     height: 40%;
     border: 1px solid black;
+}
+
+#chrarea {
+    height: 100%;
+    width: 25%;
+    display: flex;
+
+}
+
+#steamframe {
+    position:absolute;
+    height: 25%;
+    width: 15%;
+    z-index: 10;
+    left:6%;
+    bottom: 3%;
+}
+
+#character {
+    position: absolute;
+    height: 20%;
+    width: 10%;
+    left:8%;
+    bottom: 5%;
+    z-index: 5;
 }
