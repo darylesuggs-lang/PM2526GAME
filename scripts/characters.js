@@ -1,6 +1,7 @@
 // every added character needs to be added to character_files below
 const character_files = [
     "bart_simpson.json",
+    "benjamin_netanyahu.json",
     "cardinal.json",
     "forwolk_q_splont.json",
     "god.json",
@@ -29,16 +30,16 @@ class CharacterContainer {
     }
 
     get_all_characters() {
-        return Object.values(this._characters);
+        return this._characters;
     }
 
     get_all_character_names() {
         return Object.keys(this._characters);
     }
 
-    async load_characters() {
+    async load_characters(file_list = character_files) {
         // load all the story/character/ json files into the character container
-        for (const file of character_files) {
+        for (const file of file_list) {
             const response = await fetch("../resources/jsons/characters/" + file); 
             if (!response.ok) {
                 throw new Error(`Error fetching character JSON: ${response.status} ${response.statusText}`);
@@ -52,5 +53,8 @@ class CharacterContainer {
 }
 
 
-export default CharacterContainer;
+export {
+    CharacterContainer,
+    character_files
+};
 
