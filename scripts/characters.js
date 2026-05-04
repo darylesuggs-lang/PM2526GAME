@@ -36,7 +36,7 @@ class CharacterContainer {
         return Object.keys(this._characters);
     }
 
-    load_characters() {
+    async load_characters() {
         // load all the story/character/ json files into the character container
         for (const file of character_files) {
             const response = await fetch("../resources/jsons/characters/" + file); 
@@ -46,10 +46,11 @@ class CharacterContainer {
         
             const data = await response.json();
             data.love = 1
-            character_container.add_character(data);
+            this.add_character(data);
         }
     }
 }
 
-export default character_container;
+
+export default CharacterContainer;
 
