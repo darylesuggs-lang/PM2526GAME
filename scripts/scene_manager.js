@@ -3,11 +3,14 @@ class SceneManager {
     static scenes = {};
 
     static change_scene(new_scene) {
+        console.log(new_scene)
         if (SceneManager.current_scene) {
             SceneManager.current_scene.exit();
         }
         SceneManager.current_scene = new_scene;
-        SceneManager.current_scene.enter();
+        if (SceneManager.current_scene) {
+            SceneManager.current_scene.enter();
+        }
     }
 
     static get_all_scenes(name) {
