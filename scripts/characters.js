@@ -47,6 +47,7 @@ for (const file of character_files) {
     }
 
     const data = await response.json();
+    data.love = 1
     character_container.add_character(data);
 }
 
