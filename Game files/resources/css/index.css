@@ -135,7 +135,6 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   overflow: hidden;
-  background-color: #0090c8;
 }
 
 .slot {
@@ -250,15 +249,15 @@ p {
 }
 
 #wins3 {
-  background-color: #80acaa;
+  background-color: #c39c55;
 }
 
 #wins4 {
-  background-color: #80acaa;
+  background-color: #c39c55;
 }
 
 #wins5 {
-  background-color: #549584;
+  background-color: #c39c55;
 }
 
 #spinners {
@@ -366,7 +365,7 @@ p {
 }
 
 #play {
-  background-color: #549584;
+  background-color: #3e3f40;
   border: 3px solid #3e3f40;
   width: 24%;
   height: 100%;
@@ -377,11 +376,28 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FF0000;
   width: 60%;
   height: 70%;
   border-radius: 100%;
   opacity: 0.95;
   margin-left: 20%;
   margin-top: 10%;
+    color:#3e3f40;
+    background-color: #936535;
+    font-size: 250%;
+    font-family: "IM Fell English";
+    box-shadow: 0 .6em  #624321;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+
+ #play_button:active{
+    box-shadow: 0 .5rem #624321;
+    transform: translateY(.4em);
 }
