@@ -1,4 +1,4 @@
-export var inventory = {
+export let inventory = {
     /*armour: {
         helmet: null,
         chestplate: null, 
@@ -24,7 +24,6 @@ export var inventory = {
 
     }
 }
-
 
 
 
