@@ -3,10 +3,20 @@ import { SceneManager, Scene } from "./scene_manager.js";
 
 
 SceneManager.add_scene(new Scene("Main Menu", () => {
-    console.log("Welcome to the Main Menu!");
+    const main_menu = document.getElementById("main_menu");
+    main_menu.style.display = "block";
+
+    // Add event listeners for main menu buttons
+    const start_button = document.getElementById("start_button");
+    start_button.addEventListener("click", () => {
+        SceneManager.change_scene(SceneManager.get_scene("Yahu Intro"));
+    });
 },
 () => {
-    console.log("Exiting Main Menu...");
+    const main_menu = document.getElementById("main_menu");
+
+    main_menu.style.display = "none";
+    document.body.style.background = 'none'
 }));
 
 
