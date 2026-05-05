@@ -146,8 +146,8 @@ p {
   background: linear-gradient(145deg, #a6723c, #845b30);
   border: 2px solid #3e3f40;
   border-radius: 8px;
-  box-shadow:
-    inset 4px 4px 8px rgba(0, 0, 0, 0.3), 2px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 .2em #3e3f40;
+    inset: 4px 4px 8px rgba(0, 0, 0, 0.3), 2px 2px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 }
 
@@ -193,7 +193,7 @@ p {
 
 #payout {
   background-color: #d9c22e;
-  height: 95%;
+  height: 92%;
   width: 23%;
   border: 12px double #3e3f40;
   display: flex;
@@ -202,6 +202,19 @@ p {
   align-items: center;
   border-radius: 10%;
   box-shadow: 0 .9rem #3e3f40;
+  animation: blinkbder 2s linear infinite;
+}
+
+@keyframes blinkbder {
+
+  0%,
+  100% {
+    border: 12px double white;
+  }
+
+  50% {
+    border: 12px double #3e3f40;
+  }
 }
 
 #payout h2 {
@@ -220,6 +233,8 @@ p {
   border-radius: 12%;
   box-shadow: 0 .9rem #3e3f40;
 }
+
+
 
 .wins2 {
   border: 3px dashed #3e3f40;
@@ -382,7 +397,7 @@ p {
   color: #3e3f40;
   height: 40%;
   font-size: 300%;
-  animation: blink 1s linear infinite;
+  animation: blink 2s linear infinite;
 }
 
 @keyframes blink {
