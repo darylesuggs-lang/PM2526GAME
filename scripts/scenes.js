@@ -20,7 +20,6 @@ SceneManager.add_scene(new Scene("Main Menu", () => {
 },
 () => {
     const game_title_and_buttons = document.getElementById("game-title-and-buttons");
-
     game_title_and_buttons.style.transform = "translate(0, 100vh)";
 }));
 
@@ -31,11 +30,14 @@ SceneManager.add_scene(new Scene("Yahu Intro", async () => {
     const yahu_intro_dialogue = dialogue_manager.get_dialogue("yahu_intro_dialogue");
     const yahu_moving_character = benjamin_netanyahu.moving_character;
 
+    // set up the moving character and dialogue box for the intro scene
     yahu_moving_character.set_position('-100%', 'calc(40vh - 50%)');
-    yahu_moving_character.set_size('30rem', '30rem');
+    yahu_moving_character.set_size('50vh', '50vh');
     yahu_moving_character.show();
     await yahu_moving_character.move_to('calc(50vw - 50%)', 'calc(40vh - 50%)', 2000);
 
+    // play the intro dialogue and then have yahu exit the scene
     await yahu_dialogue_box.conversation(yahu_intro_dialogue);
     await yahu_moving_character.move_to('100vw', 'calc(40vh - 50%)', 2000);
+    yahu_moving_character.hide();
 }));
