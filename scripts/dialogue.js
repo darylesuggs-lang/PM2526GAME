@@ -1,6 +1,74 @@
 const template_dialogue_box = document.getElementsByClassName('dialogue_box')[0];
 
-export default class Dialogue {
+// every added dialogue json needs to be in here
+const dialogue_list = [
+    "yahu_intro_dialogue.json"
+]
+
+// dialogue manager class to store all dialogue boxes for characters as well as jsons and provide functions to access them and run conversation
+class DialogueManager {
+    constructor() {
+        this._characters = {};
+        this._dialogues = {};
+    }
+
+    add_character(name, character_json) {
+        this._characters[name] = character_json;
+    }
+
+    get_character(name) {
+        return this._characters[name];
+    }
+
+    get_all_characters() {
+        return this._characters;
+    }
+
+    async load_characters(file_list) {
+        // load all the story/character/ json files into the character container
+        for (const file of file_list) {
+            const file_name = file.split(".")[0];
+            const response = await fetch("../resources/jsons/characters/" + file); 
+
+            if (!response.ok) {
+                throw new Error(`Error fetching character JSON: ${response.status} ${response.statusText}`);
+            }
+        
+            const data = await response.json();
+            const dialogue = new Dialogue(data.name, data.image);
+            this.add_character(file_name, dialogue);
+        }
+    }
+
+    add_dialogue(name, dialogue_json) {
+        this._dialogues[name] = dialogue_json;
+    }
+
+    get_dialogue(name) {
+        return this._dialogues[name];
+    }
+
+    get_all_dialogues() {
+        return this._dialogues;
+    }
+
+    async load_dialogues(file_list) {
+        // load all the story/character/ json files into the character container
+        for (const file of file_list) {
+            const file_name = file.split(".")[0];
+            const response = await fetch("../resources/jsons/dialogue/" + file); 
+
+            if (!response.ok) {
+                throw new Error(`Error fetching dialogue JSON: ${response.status} ${response.statusText}`);
+            }
+        
+            const data = await response.json();
+            this.add_dialogue(file_name, data);
+        }
+    }
+}
+
+class Dialogue {
     constructor(name, image, is_debug = false) {
         this._is_debug = is_debug;
         this._name = name;
@@ -54,7 +122,7 @@ export default class Dialogue {
     // returns a promise that resolves when the text reveal is finished
     reveal_text(new_text, text_speed = 30, response_options = [], end_delay = 1000) {
         return new Promise((resolve) => {
-            // uses a setInterval to reveal the text one character at a time
+            // uses a setInterval to reveal the text one dialogue at a time
             const text_box = this._dialogue_box.querySelector(".text");
             
             // reset text box only if there is text to reveal
@@ -128,7 +196,7 @@ export default class Dialogue {
                     top: text_box.scrollHeight,
                     behavior: 'smooth'
                 });
-                // adds a single character
+                // adds a single dialogue
                 if (index < new_text.length) {
                     text_box.textContent += new_text[index];
                     index++;
@@ -192,45 +260,18 @@ export default class Dialogue {
     }
 }
 
+export {
+    DialogueManager,
+    Dialogue,
+    dialogue_list
+};
+
 
 // conversations are objects with numbered keys (or arrays if you want) of dialogue pieces
 
 // each piece of dialogue can have a:
-    // - "prompt" - text the other character says that is revealed in the dialogue box
+    // - "prompt" - text the other dialogue says that is revealed in the dialogue box
     // - "options" - array of options the player can choose from
     //               (each with "text" and a required "response" that is revealed when the option is chosen)
 
-// dialogue json format example:
-// {
-//     "1": {
-//         "prompt": "Hi! I'm Bejamin Netanyahu."
-//     },
-//     "2": {   
-//         "prompt": "I'm also your boss.",
-//         "options": [
-//             {
-//                 "text": "Ok cool",
-//                 "response": "Great! Now make potions for me."
-//             },
-//             {
-//                 "text": "No you aren't dude",
-//                 "response": "Well unfortunately for you my friend, you don't have a choice in this matter.  You WILL make potions for me."
-//             }
-//         ]
-//     },
-//     "3": {
-//         "options": [
-//             {
-//                 "text": "Sure thing boss",
-//                 "response": "Thats the spirit!"
-//             },
-//             {
-//                 "text": "I dont wanna do that",
-//                 "response": "I really dont care what you wanna do, just make the potions."
-//             }
-//         ]
-//     },
-//     "4": {
-//         "prompt": "Anyway, I have to go now. See you later!  And remember, make those potions real good for me, or else..."
-//     }
-// }
+// dialogue json format example is in dialogue/template_yahu_dialogue.json
