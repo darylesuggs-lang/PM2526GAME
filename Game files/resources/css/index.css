@@ -143,17 +143,17 @@ p {
   align-self: start;
   overflow: hidden;
   background-color: #936535;
-  background: linear-gradient(145deg, #a6723c, #845b30); 
+  background: linear-gradient(145deg, #a6723c, #845b30);
   border: 2px solid #3e3f40;
-  border-radius: 8px; 
-  box-shadow: 
-  inset 4px 4px 8px rgba(0, 0, 0, 0.3),  2px 2px 5px rgba(0, 0, 0, 0.2);        
+  border-radius: 8px;
+  box-shadow: 0 .2em #3e3f40;
+    inset: 4px 4px 8px rgba(0, 0, 0, 0.3), 2px 2px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 }
 
 .slot:hover {
   transform: scale(1.05);
-  border-color: #f3ab5d; 
+  border-color: #f3ab5d;
 }
 
 
@@ -193,24 +193,48 @@ p {
 
 #payout {
   background-color: #d9c22e;
-  height: 95%;
-  width: 20%;
+  height: 92%;
+  width: 23%;
   border: 12px double #3e3f40;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  border-radius: 10%;
+  box-shadow: 0 .9rem #3e3f40;
+  animation: blinkbder 2s linear infinite;
+}
+
+@keyframes blinkbder {
+
+  0%,
+  100% {
+    border: 12px double white;
+  }
+
+  50% {
+    border: 12px double #3e3f40;
+  }
+}
+
+#payout h2 {
+  color: #3e3f40;
+  font-size: 200%;
 }
 
 .wins {
   border: 3px dashed #3e3f40;
   height: 10%;
-  width: 95%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  border-radius: 12%;
+  box-shadow: 0 .9rem #3e3f40;
 }
+
+
 
 .wins2 {
   border: 3px dashed #3e3f40;
@@ -220,6 +244,8 @@ p {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  border-radius: 20%;
+  box-shadow: 0 .9rem #3e3f40;
 }
 
 .winner1 {
@@ -275,7 +301,7 @@ p {
 
 .spinner_image {
   height: 30%;
-  border: 5px dashed #3e3f40;
+  border: 5px dotted #3e3f40;
   margin-right: .5%;
   margin-left: .5%;
   width: 30%;
@@ -283,6 +309,21 @@ p {
   justify-content: center;
   align-items: center;
   background-color: #F6EB61;
+  border-radius: 15%;
+  box-shadow: 0 .9rem #3e3f40;
+  animation: blinkbd 1s linear infinite;
+}
+
+@keyframes blinkbd {
+
+  0%,
+  100% {
+    border: 5px dotted white;
+  }
+
+  50% {
+    border: 5px dotted red;
+  }
 }
 
 .images {
@@ -294,17 +335,41 @@ p {
 #won {
   border: 5px solid #3e3f40;
   background-color: #549584;
+  border-radius: 15%;
+  animation: blinkbg 1s linear infinite;
+  box-shadow: 0 .9rem #3e3f40;
 }
 
 #won1 {
   border: 5px solid #3e3f40;
   background-color: #549584;
+  border-radius: 15%;
+  box-shadow: 0 .9rem #3e3f40;
+  animation: blinkbg 1s linear infinite;
 }
 
 #won2 {
   border: 5px solid #3e3f40;
   background-color: #549584;
+  border-radius: 15%;
+  box-shadow: 0 .9rem #3e3f40;
+  animation: blinkbg 1s linear infinite;
 }
+
+@keyframes blinkbg {
+
+  0%,
+  100% {
+    background-color: #d9c22e;
+    border: 5px solid #549584;
+  }
+
+  50% {
+    background-color: #904a00;
+    border: 5px solid white;
+  }
+}
+
 
 #controls {
   width: 100%;
@@ -319,12 +384,32 @@ p {
 }
 
 #control_title {
-  border: 1px solid #3e3f40;
+  background-color: #3e3f40;
   width: 100%;
   height: 40%;
   display: flex;
   justify-content: center;
+  border-radius: 5%;
+  box-shadow: 0 .9rem #624321;
+}
 
+#control_title h1 {
+  color: #3e3f40;
+  height: 40%;
+  font-size: 300%;
+  animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    color: #d9c22e;
+  }
+
+  50% {
+    color: #904a00;
+  }
 }
 
 
@@ -335,8 +420,10 @@ p {
   justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
-  background-color:  #3e3f40;
+  background-color: #3e3f40;
   box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 .9rem #624321;
+  border-radius: 5%;
 }
 
 #control_buttons button {
@@ -369,7 +456,9 @@ p {
   border: 3px solid #3e3f40;
   width: 24%;
   height: 100%;
-    margin-left: .5%;
+  margin-left: .5%;
+  border-radius: 10%;
+  box-shadow: 0 .9rem #624321;
 }
 
 #play_button {
@@ -382,22 +471,26 @@ p {
   opacity: 0.95;
   margin-left: 20%;
   margin-top: 10%;
-    color:#3e3f40;
-    background-color: #936535;
-    font-size: 250%;
-    font-family: "IM Fell English";
-    box-shadow: 0 .6em  #624321;
-    cursor: pointer;
-    border: none;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 50%;
+  color: #3e3f40;
+  background-color: #936535;
+  font-size: 250%;
+  font-family: "IM Fell English";
+  box-shadow: 0 .6em #624321;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 50%;
 }
 
+#play_button:hover {
+  background-color: #d9c22e;
+}
 
- #play_button:active{
-    box-shadow: 0 .5rem #624321;
-    transform: translateY(.4em);
+#play_button:active {
+  box-shadow: 0 .5rem #624321;
+  transform: translateY(.4em);
+  background-color: #d9c22e;
 }
