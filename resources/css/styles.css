@@ -106,3 +106,14 @@
 .dialogue_box .text::-webkit-scrollbar {
   display: none;
 }
+
+
+/* Moving Character Styles */
+.moving_character {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 20rem;
+    transform: translate(0,0);
+}
