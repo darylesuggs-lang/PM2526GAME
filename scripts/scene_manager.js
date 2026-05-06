@@ -1,9 +1,11 @@
+import {character_container, dialogue_manager} from "./globals.js";
+
+// scene manager class to store all scenes and provide functions to access them and change scenes
 class SceneManager {
     static current_scene = null;
     static scenes = {};
 
     static change_scene(new_scene) {
-        console.log(new_scene)
         if (SceneManager.current_scene) {
             SceneManager.current_scene.exit();
         }
