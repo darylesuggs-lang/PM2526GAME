@@ -1,3 +1,5 @@
+import MovingCharacter from "./moving_character.js";
+
 // every added character needs to be added to character_files below
 const character_files = [
     "bart_simpson.json",
@@ -46,7 +48,10 @@ class CharacterContainer {
             }
         
             const data = await response.json();
+
             data.love = 1
+            data.moving_character = new MovingCharacter(data.name, data.image, 0, 0);
+
             this.add_character(data);
         }
     }

@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka:wght@600&display=swap');
 
+:root {
+  --button-text-color: #5170ff;
+  --button-bg-color: #ffffff;
+  --button-border-color: #ff66c4;
+}
+
 .cartoon-text {
   font-family: 'Luckiest Guy', cursive;
   font-size: 3rem;
@@ -13,19 +19,58 @@ body {
   background: linear-gradient(135deg, #ff66ff, #ffffff, #00ccff);
 }
 
+#game-title-and-buttons {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  transition: transform 1s ease-in-out;
+}
+
 .game-title-container {
-  position: fixed;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: center;
-  z-index: 101;
+  z-index: 2;
   pointer-events: none;
 }
 
 .game-title {
   height: 40vh;
   animation: titleFloat 4s ease-in-out infinite;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  align-items: center;
+  z-index: 100;
+}
+
+.pink-button {
+  font-family: 'Fredoka', sans-serif;
+  font-size: min(3rem, 2.5vw);
+  font-weight: 600;
+  color: var(--button-text-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: min(50vw, 1000px);
+  padding: 1rem 0;
+  background-color: var(--button-bg-color);
+  border: 6px solid var(--button-border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 10px 0 var(--button-border-color);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.pink-button:hover {
+  transform: translateY(4px);
+  box-shadow: 0 6px 0 #ff66c4;
+}
+
+.pink-button:active {
+  transform: translateY(10px);
+  box-shadow: 0 0 0 #ff66c4;
 }
 
 @keyframes titleFloat {
@@ -42,6 +87,8 @@ body {
 
 .linear_effect {
   margin: 0 auto;
+  position: fixed;
+  top: 0;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -51,7 +98,6 @@ body {
       #ffffff 33%, #ffffff 70%,
       #44b4ff00 70%, #44b4ff00 100%);
   opacity: 40%;
-  z-index: 4;
 }
 
 #line_effect {
@@ -68,7 +114,6 @@ body {
       #000000 10px,
       #000000 10px);
   opacity: 10%;
-  z-index: 5;
 }
 
 .circle {
@@ -304,41 +349,3 @@ body {
 
 }
 
-.button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 5vh;
-  align-items: center;
-  position: fixed;
-  bottom: 185px;
-  left: 0;
-  right: 0;
-  z-index: 100;
-}
-
-.pink-button {
-  font-family: 'Fredoka', sans-serif;
-  font-size: min(3rem, 5vw);
-  font-weight: 600;
-  color: #5170ff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  width: min(50vw, 1000px);
-  padding: 1rem 0;
-  background-color: #ffffff;
-  border: 6px solid #ff66c4;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 0 10px 0 #ff66c4;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-
-.pink-button:hover {
-  transform: translateY(4px);
-  box-shadow: 0 6px 0 #ff66c4;
-}
-
-.pink-button:active {
-  transform: translateY(10px);
-  box-shadow: 0 0 0 #ff66c4;
-}
