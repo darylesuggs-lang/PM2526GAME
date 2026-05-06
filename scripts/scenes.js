@@ -1,4 +1,4 @@
-import { dialogue_manager } from "./globals.js";
+import { character_container, dialogue_manager } from "./globals.js";
 import { SceneManager, Scene } from "./scene_manager.js";
 
 
@@ -11,12 +11,17 @@ SceneManager.add_scene(new Scene("Main Menu", () => {
     start_button.addEventListener("click", () => {
         SceneManager.change_scene(SceneManager.get_scene("Yahu Intro"));
     });
+
+    // quit button 
+    const quit_button = document.getElementById("quit_button");
+    quit_button.addEventListener("click", () => {
+        window.close();
+    });
 },
 () => {
-    const main_menu = document.getElementById("main_menu");
+    const game_title_and_buttons = document.getElementById("game-title-and-buttons");
 
-    main_menu.style.display = "none";
-    document.body.style.background = 'none'
+    game_title_and_buttons.style.transform = "translate(0, 100vh)";
 }));
 
 
