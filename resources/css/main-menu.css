@@ -15,7 +15,6 @@ body {
 
 .game-title-container {
   position: fixed;
-  top: 100px;
   left: 0;
   right: 0;
   display: flex;
@@ -25,8 +24,7 @@ body {
 }
 
 .game-title {
-  width: 1250px;
-  height: auto;
+  height: 40vh;
   animation: titleFloat 4s ease-in-out infinite;
 }
 
@@ -309,7 +307,7 @@ body {
 .button-container {
   display: flex;
   flex-direction: column;
-  gap: 85px;
+  gap: 5vh;
   align-items: center;
   position: fixed;
   bottom: 185px;
@@ -320,20 +318,19 @@ body {
 
 .pink-button {
   font-family: 'Fredoka', sans-serif;
-  font-size: 3rem;
+  font-size: min(3rem, 5vw);
   font-weight: 600;
   color: #5170ff;
   text-transform: uppercase;
   letter-spacing: 2px;
-  width: 1000px;
-  height: 100px;
-  padding: 20px 0;
+  width: min(50vw, 1000px);
+  padding: 1rem 0;
   background-color: #ffffff;
   border: 6px solid #ff66c4;
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 10px 0 #ff66c4;
-  transition: all 0.1s ease;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .pink-button:hover {
