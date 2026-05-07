@@ -61,7 +61,7 @@ header h1 {
 #game_area2 {
     width: 89%;
     height: 100%;
-    border: 1px solid black;
+   
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -77,25 +77,27 @@ header h1 {
 #main_game_bg_area {
     width: 74%;
     height: 59%;
-    border: 1px solid black;
+  
 }
 
 #stat_area {
     width: 25%;
     height: 59%;
-    border: 1px solid black;
+   
 }
 
 #dialog_area {
     width: 74%;
     height: 40%;
-    border: 1px solid black;
+    
 }
 
 #options_area {
     width: 25%;
     height: 40%;
-    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+   
 }
 
 #chrarea {
@@ -156,7 +158,7 @@ color: #f6e1b5;
 #dialogue {
     background-image: url("../images/parchmentdialogue.png");
     background-size: 100% 100%;
-    width: 40%;
+    width: 35%;
     height: 20%;
     position: absolute;
     left: 21%;
@@ -164,6 +166,56 @@ color: #f6e1b5;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #f6e1b5;
+    padding-left: 7%;
+    padding-right: 7%;
+    color: #3e3f40;
+}
+
+#dialogueFilter {
+    background-color: hsl(40.62deg 78.31% 83.73% / 29%);
+    width: 84%;
+    height: 80%;
+    position: absolute;
+    left: 7%;
+    bottom: 10%;
+    border-radius: 20px;
+    font-size: 1.5em;
+    font-weight: bolder;
+
+}
+
+#optframe{
+    position: absolute;
+    height: 44%;
+    width: 28%;
+    bottom: -5%;
+    right: 3%;
+}
+
+.option_button{
+    height: 15%;
+    width: 65%;
+    margin-left: 15%;
+    margin-right: 15%;
+    color:#3e3f40;
+    background-color: #936535;
+    font-size: 200%;
+    padding: 8% 51%;
+    border-radius: 1rem;
+    font-family: "IM Fell English";
+    box-shadow: 0 .9rem  #624321;
+    cursor: pointer;
+    border: none;
+}
+
+.option_area_button {
+    margin-left: 16%;
+    height: 14%;
+    width: 73%;
+    margin-top: -10%;
+}
+
+#first_option {
+    margin-top: 6%;
     
 }
