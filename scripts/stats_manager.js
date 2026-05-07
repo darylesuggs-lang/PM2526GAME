@@ -1,4 +1,4 @@
-import NumericalStat from "./NumericalStat";
+import NumericalStat from "./numerical_stat.js";
 
 const stats = {
     money: new NumericalStat("money", 100),
@@ -50,3 +50,5 @@ document.addEventListener("netneyau_rage_love", (event) => {
         console.log("trigger love ending");
     }
 });
+
+export { stats }

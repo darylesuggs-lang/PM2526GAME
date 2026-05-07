@@ -1,0 +1,38 @@
+{
+  "potions": [
+    {
+      "name": "Potion of Goop",
+      "cost": 10,
+      "amount_in_stock": 10,
+      "like_amount": 1,
+      "sprite": "nothing"
+    },
+    {
+      "name": "",
+      "cost": 0,
+      "amount_in_stock": 0,
+      "like_amount": 0,
+      "sprite": ""
+    },
+    {
+      "name": "Potion of Goop",
+      "cost": 10,
+      "amount_in_stock": 10,
+      "like_amount": 1,
+      "sprite": "nothing"
+    }
+  ],
+  "upgrades": [],
+  "potion_ingredients": [
+    {      
+      "name": "Eye Ball",
+      "cost": 10,
+      "amount_in_stock": 10,
+      "like_amount": 1,
+      "sprite": "../resources/sprites/eyeball.png"},
+    {},
+    {},
+    {},
+    {}
+  ]
+}

@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka:wght@600&display=swap');
+
+:root {
+  --button-text-color: #5170ff;
+  --button-bg-color: #ffffff;
+  --other-bg-color: #d6d1eb;
+  --button-border-color: #ff66c4;
+}
+
+.cartoon-text {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 3rem;
+}
+
+body {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff66ff, #ffffff, #00ccff);
+}
+
+#game-title-and-buttons {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  transition: transform 1s ease-in-out;
+}
+
+.game-title-container {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.game-title {
+  height: 40vh;
+  animation: titleFloat 4s ease-in-out infinite;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  align-items: center;
+  z-index: 100;
+}
+
+.pink-button {
+  font-family: 'Fredoka', sans-serif;
+  font-size: min(3rem, 2.5vw);
+  font-weight: 600;
+  color: var(--button-text-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: min(50vw, 1000px);
+  padding: 1rem 0;
+  background-color: var(--button-bg-color);
+  border: 6px solid var(--button-border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 10px 0 var(--button-border-color);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.pink-button:hover {
+  transform: translateY(4px);
+  box-shadow: 0 6px 0 #ff66c4;
+}
+
+.pink-button:active {
+  transform: translateY(10px);
+  box-shadow: 0 0 0 #ff66c4;
+}
+
+@keyframes titleFloat {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(-2deg);
+  }
+
+  50% {
+    transform: scale(1.05) rotate(2deg);
+  }
+}
+
+.linear_effect {
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  background: linear-gradient(135deg,
+      #e76fff00 0%, #e76fff00 33%,
+      #ffffff 33%, #ffffff 70%,
+      #44b4ff00 70%, #44b4ff00 100%);
+  opacity: 40%;
+}
+
+#line_effect {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: repeating-linear-gradient(45deg,
+      rgba(255, 0, 0, 0),
+      rgba(255, 0, 0, 0) 5px,
+      #000000 10px,
+      #000000 10px);
+  opacity: 10%;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  top: -150px;
+  animation: fallAndSway linear infinite;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fallAndSway {
+  0% {
+    top: -100px;
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(30px);
+  }
+
+  50% {
+    transform: translateX(-30px);
+  }
+
+  75% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    top: 110vh;
+    transform: translateX(0);
+  }
+}
+
+#c1 {
+  width: 42px;
+  height: 42px;
+  background-color: #e63946;
+  left: 12%;
+  animation-duration: 7s;
+  animation-delay: 1.2s;
+
+}
+
+#c2 {
+  width: 88px;
+  height: 88px;
+  background-color: #f1faee;
+  left: 58%;
+  animation-duration: 14s;
+  animation-delay: 0.5s;
+
+}
+
+#c3 {
+  width: 31px;
+  height: 31px;
+  background-color: #a8dadc;
+  left: 84%;
+  animation-duration: 9s;
+  animation-delay: 3.8s;
+
+}
+
+#c4 {
+  width: 65px;
+  height: 65px;
+  background-color: #457b9d;
+  left: 3%;
+  animation-duration: 11s;
+  animation-delay: 0.2s;
+
+}
+
+#c5 {
+  width: 22px;
+  height: 22px;
+  background-color: #1d3557;
+  left: 27%;
+  animation-duration: 16s;
+  animation-delay: 5.1s;
+
+}
+
+#c6 {
+  width: 94px;
+  height: 94px;
+  background-color: #ffb703;
+  left: 72%;
+  animation-duration: 10.5s;
+  animation-delay: 2.3s;
+
+}
+
+#c7 {
+  width: 38px;
+  height: 38px;
+  background-color: #fb8500;
+  left: 19%;
+  animation-duration: 13s;
+  animation-delay: 6.7s;
+
+}
+
+#c8 {
+  width: 73px;
+  height: 73px;
+  background-color: #8ecae6;
+  left: 91%;
+  animation-duration: 8.2s;
+  animation-delay: 1.9s;
+
+}
+
+#c9 {
+  width: 47px;
+  height: 47px;
+  background-color: #219ebc;
+  left: 46%;
+  animation-duration: 15s;
+  animation-delay: 4.4s;
+
+}
+
+#c10 {
+  width: 52px;
+  height: 52px;
+  background-color: #023047;
+  left: 79%;
+  animation-duration: 12s;
+  animation-delay: 0.8s;
+
+}
+
+#c11 {
+  width: 59px;
+  height: 59px;
+  background-color: #6a0572;
+  left: 33%;
+  animation-duration: 9.5s;
+  animation-delay: 2.1s;
+
+}
+
+#c12 {
+  width: 81px;
+  height: 81px;
+  background-color: #ab83a1;
+  left: 51%;
+  animation-duration: 13.5s;
+  animation-delay: 5.5s;
+
+}
+
+#c13 {
+  width: 36px;
+  height: 36px;
+  background-color: #eeeeee;
+  left: 66%;
+  animation-duration: 11.2s;
+  animation-delay: 3.2s;
+
+}
+
+#c14 {
+  width: 62px;
+  height: 62px;
+  background-color: #393e46;
+  left: 8%;
+  animation-duration: 10s;
+  animation-delay: 0.9s;
+
+}
+
+#c15 {
+  width: 28px;
+  height: 28px;
+  background-color: #00adb5;
+  left: 40%;
+  animation-duration: 17s;
+  animation-delay: 4.1s;
+
+}
+
+#c16 {
+  width: 97px;
+  height: 97px;
+  background-color: #ff2e63;
+  left: 95%;
+  animation-duration: 7.8s;
+  animation-delay: 6.2s;
+
+}
+
+#c17 {
+  width: 44px;
+  height: 44px;
+  background-color: #252a34;
+  left: 21%;
+  animation-duration: 14.8s;
+  animation-delay: 1.5s;
+
+}
+
+#c18 {
+  width: 68px;
+  height: 68px;
+  background-color: #f9ed69;
+  left: 87%;
+  animation-duration: 10.3s;
+  animation-delay: 2.7s;
+
+}
+
+#c19 {
+  width: 41px;
+  height: 41px;
+  background-color: #f08a5d;
+  left: 31%;
+  animation-duration: 12.6s;
+  animation-delay: 5.9s;
+
+}
+
+#c20 {
+  width: 56px;
+  height: 56px;
+  background-color: #b83b5e;
+  left: 62%;
+  animation-duration: 13s;
+  animation-delay: 0.1s;
+
+}
+
