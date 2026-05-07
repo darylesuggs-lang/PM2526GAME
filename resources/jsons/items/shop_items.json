@@ -24,7 +24,12 @@
   ],
   "upgrades": [],
   "potion_ingredients": [
-    {},
+    {      
+      "name": "Eye Ball",
+      "cost": 10,
+      "amount_in_stock": 10,
+      "like_amount": 1,
+      "sprite": "../resources/sprites/eyeball.png"},
     {},
     {},
     {},
