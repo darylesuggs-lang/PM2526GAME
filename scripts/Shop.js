@@ -10,7 +10,7 @@ const shop = {
     upgrades_for_sale: items.upgrades,
     potion_ingredients_for_sale: items.potion_ingredients,
     updateMoney() {
-        document.getElementById("moneyText").innerHTML = "$" + stats.money._value
+        document.getElementById("moneyText").innerHTML = "$" + stats.money.value
     },
     randomShopList() {
         let item_in_stock = []
