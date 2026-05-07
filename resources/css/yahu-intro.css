@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/5fbd14ed-459a-4c6a-8778-11a39601a9dd\ \(1\).jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.light-rays {
+    position: fixed;
+    top: -50%;
+    left: -30%;
+    width: 250%;
+    height: 250%;
+    pointer-events: none;
+    z-index: 1;
+
+    background: repeating-linear-gradient(100deg,
+            transparent 0%,
+            transparent 5%,
+            rgba(255, 250, 220, 0.4) 10%,
+            rgba(255, 255, 255, 0.8) 10%,
+            rgba(255, 250, 220, 0.4) 9%,
+            transparent 15%,
+            transparent 15%);
+    filter: blur(20%);
+    mix-blend-mode: screen;
+
+    transform: skewX(-25deg);
+    animation: waveLight 8s ease-in-out infinite alternate;
+}
+
+@keyframes waveLight {
+    0% {
+        transform: skewX(-25deg) translateX(-40px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: skewX(-22deg) translateX(40px);
+        opacity: 1;
+    }
+}
+
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    opacity: 0.3;
+    background-color: #d1d1d1;
+    top: -100px;
+    filter: blur(1px);
+    animation: fallAndSway linear infinite;
+    animation-fill-mode: backwards;
+    pointer-events: none;
+}
+
+.circle:nth-child(3n) {
+    background-color: #f9ed69;
+    opacity: 0.5;
+}
+
+.circle:nth-child(5n) {
+    background-color: #fb8500;
+    opacity: 0.4;
+}
+
+@keyframes fallAndSway {
+    0% {
+        top: -100px;
+        left: 110%;
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(20px);
+    }
+
+    50% {
+        transform: translateX(-20px);
+    }
+
+    75% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        top: 110vh;
+
+        transform: translateX(0);
+    }
+}
+
+#c1 {
+    left: 12%;
+    animation-duration: 15s;
+    animation-delay: 1.2s;
+}
+
+#c2 {
+    left: 58%;
+    animation-duration: 22s;
+    animation-delay: 0.5s;
+}
+
+#c3 {
+    left: 84%;
+    animation-duration: 18s;
+    animation-delay: 3.8s;
+}
+
+#c4 {
+    left: 3%;
+    animation-duration: 20s;
+    animation-delay: 0.2s;
+}
+
+#c5 {
+    left: 27%;
+    animation-duration: 25s;
+    animation-delay: 5.1s;
+}
+
+#c6 {
+    left: 72%;
+    animation-duration: 19s;
+    animation-delay: 2.3s;
+}
+
+#c7 {
+    left: 19%;
+    animation-duration: 23s;
+    animation-delay: 6.7s;
+}
+
+#c8 {
+    left: 91%;
+    animation-duration: 17s;
+    animation-delay: 1.9s;
+}
+
+#c9 {
+    left: 46%;
+    animation-duration: 24s;
+    animation-delay: 4.4s;
+}
+
+#c10 {
+    left: 79%;
+    animation-duration: 21s;
+    animation-delay: 0.8s;
+}
+
+#c11 {
+    left: 33%;
+    animation-duration: 16s;
+    animation-delay: 2.1s;
+}
+
+#c12 {
+    left: 51%;
+    animation-duration: 26s;
+    animation-delay: 5.5s;
+}
+
+#c13 {
+    left: 66%;
+    animation-duration: 20s;
+    animation-delay: 3.2s;
+}
+
+#c14 {
+    left: 8%;
+    animation-duration: 18s;
+    animation-delay: 0.9s;
+}
+
+#c15 {
+    left: 40%;
+    animation-duration: 28s;
+    animation-delay: 4.1s;
+}
+
+#c16 {
+    left: 95%;
+    animation-duration: 15s;
+    animation-delay: 6.2s;
+}
+
+#c17 {
+    left: 21%;
+    animation-duration: 24s;
+    animation-delay: 1.5s;
+}
+
+#c18 {
+    left: 87%;
+    animation-duration: 19s;
+    animation-delay: 2.7s;
+}
+
+#c19 {
+    left: 31%;
+    animation-duration: 22s;
+    animation-delay: 5.9s;
+}
+
+#c20 {
+    left: 62%;
+    animation-duration: 23s;
+    animation-delay: 0.1s;
+}
