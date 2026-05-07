@@ -93,8 +93,11 @@ class Dialogue {
                 if (this._is_debug) {
                     console.log("showing dialogue box");
                 }
-                this._dialogue_box.style.bottom = "1rem";
-                this._options_menu.style.bottom = "-100%";
+                window.requestAnimationFrame(() => {
+                    this._dialogue_box.offsetHeight; // forces reflow so the animation works
+                    this._dialogue_box.style.bottom = "1rem";
+                    this._options_menu.style.bottom = "-100%";
+                })
 
                 // second timeout resolves promise after animation finishes
                 setTimeout(() => resolve('finished'), 1000);
@@ -174,7 +177,10 @@ class Dialogue {
                                     // aborts the event listener so it doesn't resolve multiple times if multiple buttons are clicked
                                     controller.abort();
 
-                                    this._options_menu.style.bottom = "-100%";
+                                    window.requestAnimationFrame(() => {
+                                        this._dialogue_box.offsetHeight; // forces reflow so the animation works
+                                        this._options_menu.style.bottom = "-100%";
+                                    });
                                     resolve(i);
 
                                     // delete all other dialogue options
@@ -187,7 +193,10 @@ class Dialogue {
                             });
                             
                             // animates the options menu sliding up from bottom
-                            this._options_menu.style.bottom = "0%";
+                            window.requestAnimationFrame(() => {
+                                this._dialogue_box.offsetHeight; // forces reflow so the animation works
+                                this._options_menu.style.bottom = "0%";
+                            });
                         }, end_delay);
                     }
                 }
