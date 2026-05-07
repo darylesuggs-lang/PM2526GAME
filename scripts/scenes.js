@@ -1,5 +1,6 @@
 import { character_container, dialogue_manager } from "./globals.js";
 import { SceneManager, Scene } from "./scene_manager.js";
+import SceneTools from "./scene_tools.js";
 
 
 SceneManager.add_scene(new Scene("Main Menu", () => {
@@ -29,6 +30,23 @@ SceneManager.add_scene(new Scene("Yahu Intro", async () => {
     const yahu_dialogue_box = dialogue_manager.get_character("benjamin_netanyahu");
     const yahu_intro_dialogue = dialogue_manager.get_dialogue("yahu_intro_dialogue");
     const yahu_moving_character = benjamin_netanyahu.moving_character;
+
+    await SceneTools.transition_fade(1000, 500, () => {
+        document.body.style.backgroundImage = "url('./resources/images/office.jpg')";
+        document.body.style.backgroundSize = "cover";
+        document.styleSheets[0].insertRule('.menu_circle { display: none; }', 0);
+        document.styleSheets[0].insertRule('.dust_circle { display: block; }', 0);
+        document.querySelector('.linear_effect').style.display = 'none';
+
+        // set a timeout to fade in the light rays after 1 second
+        setTimeout(() => {
+            const light_rays = document.querySelector('.light-rays');
+            light_rays.style.display = 'block';
+            requestAnimationFrame(() => {
+                light_rays.style.opacity = '100%';
+            });
+        }, 3000);
+    })
 
     // set up the moving character and dialogue box for the intro scene
     yahu_moving_character.set_position('-100%', 'calc(40vh - 50%)');
