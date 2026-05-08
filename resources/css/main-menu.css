@@ -117,16 +117,16 @@ body {
   opacity: 10%;
 }
 
-.circle {
+.menu_circle {
   position: absolute;
   border-radius: 50%;
   opacity: 0.3;
   top: -150px;
-  animation: fallAndSway linear infinite;
+  animation: menuFallAndSway linear infinite;
   animation-fill-mode: backwards;
 }
 
-@keyframes fallAndSway {
+@keyframes menuFallAndSway {
   0% {
     top: -100px;
     transform: translateX(0);

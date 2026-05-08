@@ -1,10 +1,10 @@
 :root {
-    --dialogue-border-color: #5170ff;
-    --dialogue-bg-color: #d6d1eb;
-    --dialogue-name-bg-color: #fddcf8;
-    --dialogue-text-color: #af6de1;
-    --dialogue-text-shadow-color: #a30b37; 
-    --dialogue-image-background-color: #d6d1eb;
+    --dialogue-border-color: #7cc6ff;
+    --dialogue-bg-color: #fff8fb;
+    --dialogue-name-bg-color: #ffd6ec;
+    --dialogue-text-color: #b23a6b;
+    --dialogue-text-shadow-color: #ff9ac8;
+    --dialogue-image-background-color: #e6f7ff;
 
     --dialogue-portrait-border-size: 8px;
     --dialogue-gap: 0.5rem;
@@ -14,7 +14,6 @@
 }
 
 /* Dialogue box styles */
-
 .dialogue_box {
     position: fixed;
     left: 50%;
