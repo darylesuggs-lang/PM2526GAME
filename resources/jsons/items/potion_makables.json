@@ -1,0 +1,18 @@
+{
+    "potions": [
+        {
+            "potion_name": "Potion of Leaping",
+            "input": [
+                "Snake venom",
+                "really big fish",
+                "goop"
+            ],
+            "cost": 99
+        },
+        {
+            "potion_name": "",
+            "input": [],
+            "cost": 0
+        }
+    ]
+}
