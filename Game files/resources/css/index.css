@@ -184,6 +184,7 @@ p {
 
 
 /**Slot_machine.css**/
+
 #slot_machine {
   display: flex;
   flex-wrap: wrap;
@@ -201,11 +202,11 @@ p {
   flex-wrap: wrap;
   align-items: center;
   border-radius: 10%;
-  box-shadow: 0 .9rem #3e3f40;
+  
   animation: blinkbder 2s linear infinite;
 }
 
-@keyframes blinkbder {
+/*@keyframes blinkbder {
 
   0%,
   100% {
@@ -216,7 +217,7 @@ p {
     border: 12px double #3e3f40;
   }
 }
-
+*/
 #payout h2 {
   color: #3e3f40;
   font-size: 200%;
@@ -231,7 +232,7 @@ p {
   align-items: center;
   flex-wrap: wrap;
   border-radius: 12%;
-  box-shadow: 0 .9rem #3e3f40;
+ 
 }
 
 
@@ -245,7 +246,6 @@ p {
   align-items: center;
   flex-wrap: wrap;
   border-radius: 20%;
-  box-shadow: 0 .9rem #3e3f40;
 }
 
 .winner1 {
@@ -310,11 +310,10 @@ p {
   align-items: center;
   background-color: #F6EB61;
   border-radius: 15%;
-  box-shadow: 0 .9rem #3e3f40;
   animation: blinkbd 1s linear infinite;
 }
 
-@keyframes blinkbd {
+/*@keyframes blinkbd {
 
   0%,
   100% {
@@ -325,7 +324,7 @@ p {
     border: 5px dotted red;
   }
 }
-
+*/
 .images {
   height: 50%;
   width: 30%;
@@ -337,14 +336,12 @@ p {
   background-color: #549584;
   border-radius: 15%;
   animation: blinkbg 1s linear infinite;
-  box-shadow: 0 .9rem #3e3f40;
 }
 
 #won1 {
   border: 5px solid #3e3f40;
   background-color: #549584;
   border-radius: 15%;
-  box-shadow: 0 .9rem #3e3f40;
   animation: blinkbg 1s linear infinite;
 }
 
@@ -352,11 +349,10 @@ p {
   border: 5px solid #3e3f40;
   background-color: #549584;
   border-radius: 15%;
-  box-shadow: 0 .9rem #3e3f40;
   animation: blinkbg 1s linear infinite;
 }
 
-@keyframes blinkbg {
+/*@keyframes blinkbg {
 
   0%,
   100% {
@@ -369,7 +365,7 @@ p {
     border: 5px solid white;
   }
 }
-
+*/
 
 #controls {
   width: 100%;
@@ -391,6 +387,18 @@ p {
   justify-content: center;
   border-radius: 5%;
   box-shadow: 0 .9rem #624321;
+}
+
+#credits {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9c22e;
+  border-radius: 30%;
+  height: 30%;
+  width: 20%;
+  opacity: 0.75;
 }
 
 #control_title h1 {
@@ -459,6 +467,7 @@ p {
   margin-left: .5%;
   border-radius: 10%;
   box-shadow: 0 .9rem #624321;
+  display: flex;
 }
 
 #play_button {
@@ -478,11 +487,12 @@ p {
   box-shadow: 0 .6em #624321;
   cursor: pointer;
   border: none;
-  position: relative;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   border-radius: 50%;
+  z-index: 10;
+  position: absolute;
 }
 
 #play_button:hover {
@@ -493,4 +503,12 @@ p {
   box-shadow: 0 .5rem #624321;
   transform: translateY(.4em);
   background-color: #d9c22e;
+}
+
+#spin_border {
+ 
+  width: 27%;
+  z-index: 1;
+  position: absolute;
+  right: 0;
 }
