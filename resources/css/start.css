@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Jack Of Gears';
+    src: url('../fonts/jackofgears/jack_of_gears.woff2') format('woff2'),
+        url('../fonts/jackofgears/jack_of_gears.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: #f6e1b5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/*name settings*/
+h1 {
+    font-size: 6.5rem;
+    color: #936535;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    font-family: Jack Of Gears, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#name_container {
+    display: flex;
+    position: relative;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+}
+
+#gamehead{
+position: absolute;
+top:1%;
+align-items: center;
+}
+
+#gamehead h1{
+    font-size: 10rem;
+    height: 163px;
+    width: 765px;
+
+}
+
+
+/*button settings*/
+
+#gear_container {
+    display: flex;
+    position: relative;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#buttonBorder {
+    width: 15vw;
+    height: 7vh;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 00%);
+}
+
+
+#startButton {
+    width: 12.5vw;
+    height: 5.75vh;
+    margin-top: .75vh;
+    margin-left: 1vh;
+    border-radius: 15%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    background-color: #d9c22e;
+    left: 50%;
+    top: 60%;
+    transform: translate(-60%, 0%);
+     z-index: 9;
+}
+
+h4 {
+    color: #3e3f40;
+    font-family: "IM Fell English", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+
+#gear_container:hover {
+    transform: translateY(-2px);
+}
+
+
+/*game page code*/
