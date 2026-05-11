@@ -1,19 +1,19 @@
 :root {
-    --dialogue-border-color: #472d30;
-    --dialogue-bg-color: #904a00;
-    --dialogue-name-bg-color: #e26d5c;
-    --dialogue-text-color: #ffe1a8;
-    --dialogue-image-background-color: #aa5551;
+    --dialogue-border-color: #7cc6ff;
+    --dialogue-bg-color: #fff8fb;
+    --dialogue-name-bg-color: #ffd6ec;
+    --dialogue-text-color: #b23a6b;
+    --dialogue-text-shadow-color: #ff9ac8;
+    --dialogue-image-background-color: #e6f7ff;
 
     --dialogue-portrait-border-size: 8px;
     --dialogue-gap: 0.5rem;
-    --dialogue-slide-transition: 1s ease-in-out;
 
     --dialogue-name-font: 'Pixelify Sans', serif;
     --dialogue-text-font: 'Pixelify Sans', sans-serif;
 }
 
-
+/* Dialogue box styles */
 .dialogue_box {
     position: fixed;
     left: 50%;
@@ -50,7 +50,7 @@
     background-color: var(--dialogue-name-bg-color);
     color: var(--dialogue-text-color);
     border: var(--dialogue-border-color) 4px solid;
-    text-shadow: -2.5px 2.5px 0 var(--dialogue-border-color);
+    text-shadow: -1.5px 1.5px 0 var(--dialogue-text-shadow-color);
 }
 .dialogue_box .text {
     width: 30vw;
@@ -85,7 +85,7 @@
     padding: 0.75rem;
     padding-bottom: 0;
     transform: translate(100%, 0);
-    transition: bottom var(--dialogue-slide-transition);
+    transition: bottom 1s ease-in-out;
 }
 .dialogue_box .options .option_button {
     font-family: var(--dialogue-text-font);
@@ -95,7 +95,7 @@
     background-color: var(--dialogue-name-bg-color);
     color: var(--dialogue-text-color);
     border: var(--dialogue-border-color) 4px solid;
-    text-shadow: -2.5px 2.5px 0 var(--dialogue-border-color);
+    text-shadow: -1px 1px 0 var(--dialogue-text-shadow-color);
     cursor: pointer;
 }
 .dialogue_box .options .option_button.template {
@@ -105,4 +105,16 @@
 /* also get rid of text scrollbar but for webkit browsers */
 .dialogue_box .text::-webkit-scrollbar {
   display: none;
+}
+
+
+/* Moving Character Styles */
+.moving_character {
+    image-rendering: pixelated;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 20rem;
+    transform: translate(0,0);
 }
