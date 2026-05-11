@@ -1,17 +1,16 @@
-import NumericalStat from "./numerical_stat.js";
+import { stats } from "./stats.js";  
 
-const stats = {
-    money: new NumericalStat("money", 100),
-    schizophrenia: new NumericalStat("schizophrenia", 0),
-    gambling_anxiety: new NumericalStat("gambling_anxiety", 0),
-    netneyau_rage_love: new NumericalStat("netneyau_rage_love", 0)
-}
+/*
+    HOW TO USE: import this in main.js and nowhere else.
+    Place all event listeners in this file and import their respective things that they will trigger.
+*/
+
 
 /*
 
 Add a event listener for each stat in the stats object and make sure the names are the same.
 
-Template for the event listener is below:
+Stat template event listener is below:
 
 document.addEventListener("event_name", (event) => {
     if (event.detail.value < 0) {
@@ -25,6 +24,7 @@ document.addEventListener("money", (event) => {
     if (event.detail.value <= 0) {
         console.log("bankrupt ending");
     }
+    
 });
 
 document.addEventListener("schizophrenia", (event) => {
@@ -50,5 +50,3 @@ document.addEventListener("netneyau_rage_love", (event) => {
         console.log("trigger love ending");
     }
 });
-
-export { stats }
