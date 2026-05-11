@@ -5,10 +5,23 @@
     <link rel="stylesheet" href="resources/css/fire.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fireplace</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #0a0a0a;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+    <title>Fire</title>
 </head>
 
 <body>
+    <canvas id="ashCanvas"></canvas>
+    <script src="scripts/ash.js"></script>
     <section class="whole_fire">
         <div class="image"></div>
         <div class="hell">
