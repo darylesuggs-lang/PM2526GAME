@@ -43,10 +43,13 @@ header h1 {
     font-family: Jack Of Gears, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+#game1 {
+    display: none;
+}
+
 #game_area_main {
     width: 100%;
     height: 89%;
-
     display: flex;
     z-index: 10;
 }
@@ -61,7 +64,7 @@ header h1 {
 #game_area2 {
     width: 89%;
     height: 100%;
-   
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -74,22 +77,29 @@ header h1 {
 
 }
 
+/*Main Game Area*/
+#main_game {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
 #main_game_bg_area {
     width: 74%;
     height: 59%;
-  
+
 }
 
 #stat_area {
     width: 25%;
     height: 59%;
-   
+
 }
 
 #dialog_area {
     width: 74%;
     height: 40%;
-    
+
 }
 
 #options_area {
@@ -97,7 +107,7 @@ header h1 {
     height: 40%;
     display: flex;
     flex-wrap: wrap;
-   
+
 }
 
 #chrarea {
@@ -149,9 +159,9 @@ header h1 {
     justify-content: center;
 }
 
-#name h2{
-font-family: IM Fell English SC, Georgia;
-color: #f6e1b5;
+#name h2 {
+    font-family: IM Fell English SC, Georgia;
+    color: #f6e1b5;
 
 }
 
@@ -184,7 +194,7 @@ color: #f6e1b5;
 
 }
 
-#optframe{
+#optframe {
     position: absolute;
     height: 44%;
     width: 28%;
@@ -192,18 +202,18 @@ color: #f6e1b5;
     right: 3%;
 }
 
-.option_button{
+.option_button {
     height: 15%;
     width: 65%;
     margin-left: 15%;
     margin-right: 15%;
-    color:#3e3f40;
+    color: #3e3f40;
     background-color: #936535;
     font-size: 200%;
     padding: 8% 51%;
     border-radius: 1rem;
     font-family: "IM Fell English";
-    box-shadow: 0 .9rem  #624321;
+    box-shadow: 0 .9rem #624321;
     cursor: pointer;
     border: none;
 }
@@ -217,5 +227,573 @@ color: #f6e1b5;
 
 #first_option {
     margin-top: 6%;
-    
+
+}
+
+/*7532*/
+/*Slot Machine System*/
+#lotto1 {}
+
+#slot_machine {
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+}
+
+#payout {
+    background-color: #d9c22e;
+    height: 92%;
+    width: 23%;
+    border: 12px double #3e3f40;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 10%;
+
+    animation: blinkbder 2s linear infinite;
+}
+
+/*@keyframes blinkbder {
+
+  0%,
+  100% {
+    border: 12px double white;
+  }
+
+  50% {
+    border: 12px double #3e3f40;
+  }
+}
+*/
+#payout h2 {
+    color: #3e3f40;
+    font-size: 200%;
+}
+
+.wins {
+    border: 3px dashed #3e3f40;
+    height: 10%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 12%;
+
+}
+
+
+
+.wins2 {
+    border: 3px dashed #3e3f40;
+    height: 20%;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20%;
+}
+
+.winner1 {
+    height: 70%;
+    width: 15%;
+    margin-right: 5%;
+}
+
+.winner2 {
+    height: 70%;
+    width: 13%;
+    margin-right: 1%;
+}
+
+.winner3 {
+    height: 40%;
+    width: 13%;
+    margin-right: 1%;
+}
+
+#wins1 {
+    background-color: #c39c55;
+}
+
+#wins2 {
+    background-color: #c39c55;
+}
+
+#wins3 {
+    background-color: #c39c55;
+}
+
+#wins4 {
+    background-color: #c39c55;
+}
+
+#wins5 {
+    background-color: #c39c55;
+}
+
+#spinners {
+    height: 100%;
+    width: 79%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#main_screen {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 55%;
+    width: 100%;
+}
+
+.spinner_image {
+    height: 30%;
+    border: 5px dotted #3e3f40;
+    margin-right: .5%;
+    margin-left: .5%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6EB61;
+    border-radius: 15%;
+    animation: blinkbd 1s linear infinite;
+}
+
+/*@keyframes blinkbd {
+
+  0%,
+  100% {
+    border: 5px dotted white;
+  }
+
+  50% {
+    border: 5px dotted red;
+  }
+}
+*/
+.images {
+    height: 50%;
+    width: 30%;
+    display: flex;
+}
+
+#won {
+    border: 5px solid #3e3f40;
+    background-color: #549584;
+    border-radius: 15%;
+    animation: blinkbg 1s linear infinite;
+}
+
+#won1 {
+    border: 5px solid #3e3f40;
+    background-color: #549584;
+    border-radius: 15%;
+    animation: blinkbg 1s linear infinite;
+}
+
+#won2 {
+    border: 5px solid #3e3f40;
+    background-color: #549584;
+    border-radius: 15%;
+    animation: blinkbg 1s linear infinite;
+}
+
+/*@keyframes blinkbg {
+
+  0%,
+  100% {
+    background-color: #d9c22e;
+    border: 5px solid #549584;
+  }
+
+  50% {
+    background-color: #904a00;
+    border: 5px solid white;
+  }
+}
+*/
+
+#controls {
+    width: 100%;
+    height: 35%;
+    display: flex;
+
+}
+
+#all_controls {
+    width: 77%;
+    height: 100%;
+}
+
+#control_title {
+    padding-right: 2%;
+    padding-left: 2%;
+    background-color: #3e3f40;
+    width: 96%;
+    height: 40%;
+    display: flex;
+    border-radius: 5%;
+    box-shadow: 0 .9rem #3e3f40;
+    align-items: left;
+    justify-content: space-between;
+}
+
+#credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9c22e;
+    border-radius: 30%;
+    height: 30%;
+    width: 20%;
+    opacity: 0.75;
+}
+
+#control_title h1 {
+    color: #3e3f40;
+    height: 40%;
+    font-size: 300%;
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        color: #d9c22e;
+    }
+
+    50% {
+        color: #904a00;
+    }
+}
+
+#banner_outline {
+    position: absolute;
+    display: flex;
+    width: 14%;
+    height: 30%;
+    right: 54%;
+    margin-bottom: 6%;
+}
+
+#banner_outline1 {
+    position: absolute;
+    display: flex;
+    width: 13%;
+    height: 30%;
+    right: 34%;
+    margin-bottom: 6%;
+}
+
+#banner_outline2 {
+    position: absolute;
+    display: flex;
+    width: 13%;
+    height: 30%;
+    right: 24%;
+    margin-bottom: 6%;
+}
+
+#banner_outline3 {
+    position: absolute;
+    display: flex;
+    width: 13%;
+    height: 30%;
+    right: 44%;
+    margin-bottom: 6%;
+}
+
+#banner_outline4 {
+    position: absolute;
+    display: flex;
+    width: 13%;
+    height: 30%;
+    right: 64%;
+    margin-bottom: 6%;
+}
+
+#banner_outline5 {
+    position: absolute;
+    display: flex;
+    width: 13%;
+    height: 30%;
+    right: 74%;
+    margin-bottom: 6%;
+}
+
+#banner_outline6 {
+    position: absolute;
+    display: flex;
+    width: 13%;
+    height: 30%;
+    right: 84%;
+    margin-bottom: 6%;
+}
+
+#control_buttons {
+    display: flex;
+    width: 100%;
+    height: 59%;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #3e3f40;
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 .9rem #624321;
+    border-radius: 5%;
+}
+
+#control_buttons button {
+    width: 10%;
+    height: 50%;
+    color: #3e3f40;
+    background-color: #936535;
+    font-size: 200%;
+    border-radius: 1rem;
+    font-family: "IM Fell English";
+    box-shadow: 0 .9rem #624321;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 10%;
+}
+
+#control_buttons button:hover {
+    background-color: #d9c22e;
+    cursor: pointer;
+}
+
+#control_buttons button:active {
+    box-shadow: 0 .2em #624321;
+    transform: translateY(5px);
+    color: #f6e1b5;
+    background-color: #904a00;
+}
+
+#play_button {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 19.5%;
+    border-radius: 100%;
+    opacity: 0.95;
+    margin-left: 20%;
+    margin-top: 3%;
+    color: #3e3f40;
+    background-color: #936535;
+    font-size: 250%;
+    font-family: "IM Fell English";
+    box-shadow: 0 .6em #624321;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: larger;
+    z-index: 10;
+    position: absolute;
+    right: 7%;
+
+}
+
+#play_button:hover {
+    background-color: #d9c22e;
+}
+
+#play_button:active {
+    box-shadow: 0 .5rem #624321;
+    transform: translateY(.4em);
+    background-color: #d9c22e;
+}
+
+#spin_border {
+    width: 20%;
+    height: 35%;
+    z-index: 1;
+    position: absolute;
+    right: 2.5%;
+}
+
+/*Shop Sytem*/
+#shop_container {
+    display: none;
+    flex-wrap: wrap;
+    font-family: "IM Fell English SC", Georgia, serif;
+    background-color: #f6e1b5;
+    height: 100%;
+    width: 100%;
+}
+
+#top {
+    width: 100%;
+    height: 35%;
+    display: flex;
+}
+
+.im-fell-english-sc-regular {
+    font-family: "IM Fell English SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "IM Fell English SC", Georgia, serif;
+    color: #3e3f40;
+}
+
+h2 {
+    font-family: "IM Fell English SC", Georgia, serif;
+    color: #3e3f40;
+}
+
+p {
+    font-family: "IM Fell English SC", Georgia, serif;
+    color: #3e3f40;
+}
+
+#first_section {
+    height: 100%;
+    width: 25%;
+}
+
+#first_section button {
+    height: 25%;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: .5%;
+    color: #3e3f40;
+    background-color: #936535;
+    font-size: 200%;
+    border-radius: 1rem;
+    font-family: "IM Fell English";
+    box-shadow: 0 .9rem #624321;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#second_section {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-items: center;
+}
+
+#second_section img {
+    width: 100%;
+    height: 100%;
+}
+
+#shop {
+    position: absolute;
+    top: 1%;
+    left: 48%;
+    opacity: 0.75;
+}
+
+#shop1 {
+    display: none;
+}
+
+#money {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15%;
+    left: 67%;
+    background-color: #d9c22e;
+    border-radius: 30%;
+    height: 5%;
+    width: 5%;
+    opacity: 0.75;
+}
+
+
+#third_section {
+    height: 100%;
+    width: 25%;
+}
+
+#third_section button {
+    height: 25%;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: .5%;
+    color: #3e3f40;
+    background-color: #936535;
+    font-size: 200%;
+    border-radius: 1rem;
+    font-family: "IM Fell English";
+    box-shadow: 0 .9rem #624321;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bottom {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.slot {
+    width: 17%;
+    aspect-ratio: 1 / 1;
+    align-self: start;
+    overflow: hidden;
+    background-color: #936535;
+    background: linear-gradient(145deg, #a6723c, #845b30);
+    border: 2px solid #3e3f40;
+    border-radius: 8px;
+    box-shadow: 0 .2em #3e3f40;
+    inset: 4px 4px 8px rgba(0, 0, 0, 0.3), 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.slot:hover {
+    transform: scale(1.05);
+    border-color: #f3ab5d;
+}
+
+
+#first_section button:hover {
+    background-color: #d9c22e;
+    cursor: pointer;
+}
+
+#third_section button:hover {
+    background-color: #d9c22e;
+    cursor: pointer;
+}
+
+
+#first_section button:active {
+    box-shadow: 0 .2em #624321;
+    transform: translateY(5px);
+    color: #f6e1b5;
+    background-color: #904a00;
+}
+
+#third_section button:active {
+    box-shadow: 0 .2em #624321;
+    transform: translateY(5px);
+    color: #f6e1b5;
+    background-color: #904a00;
 }
