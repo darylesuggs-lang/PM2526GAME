@@ -8,6 +8,7 @@ body {
   background-color: #f6e1b5;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 #shop_container {
@@ -147,7 +148,7 @@ p {
   border: 2px solid #3e3f40;
   border-radius: 8px;
   box-shadow: 0 .2em #3e3f40;
-    inset: 4px 4px 8px rgba(0, 0, 0, 0.3), 2px 2px 5px rgba(0, 0, 0, 0.2);
+  inset: 4px 4px 8px rgba(0, 0, 0, 0.3), 2px 2px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 }
 
@@ -184,6 +185,7 @@ p {
 
 
 /**Slot_machine.css**/
+
 #slot_machine {
   display: flex;
   flex-wrap: wrap;
@@ -201,11 +203,11 @@ p {
   flex-wrap: wrap;
   align-items: center;
   border-radius: 10%;
-  box-shadow: 0 .9rem #3e3f40;
+
   animation: blinkbder 2s linear infinite;
 }
 
-@keyframes blinkbder {
+/*@keyframes blinkbder {
 
   0%,
   100% {
@@ -216,7 +218,7 @@ p {
     border: 12px double #3e3f40;
   }
 }
-
+*/
 #payout h2 {
   color: #3e3f40;
   font-size: 200%;
@@ -231,7 +233,7 @@ p {
   align-items: center;
   flex-wrap: wrap;
   border-radius: 12%;
-  box-shadow: 0 .9rem #3e3f40;
+
 }
 
 
@@ -245,7 +247,6 @@ p {
   align-items: center;
   flex-wrap: wrap;
   border-radius: 20%;
-  box-shadow: 0 .9rem #3e3f40;
 }
 
 .winner1 {
@@ -297,6 +298,8 @@ p {
 #main-screen {
   display: flex;
   flex-wrap: nowrap;
+  height: 60%;
+  width: 100%;
 }
 
 .spinner_image {
@@ -310,11 +313,10 @@ p {
   align-items: center;
   background-color: #F6EB61;
   border-radius: 15%;
-  box-shadow: 0 .9rem #3e3f40;
   animation: blinkbd 1s linear infinite;
 }
 
-@keyframes blinkbd {
+/*@keyframes blinkbd {
 
   0%,
   100% {
@@ -325,7 +327,7 @@ p {
     border: 5px dotted red;
   }
 }
-
+*/
 .images {
   height: 50%;
   width: 30%;
@@ -337,14 +339,12 @@ p {
   background-color: #549584;
   border-radius: 15%;
   animation: blinkbg 1s linear infinite;
-  box-shadow: 0 .9rem #3e3f40;
 }
 
 #won1 {
   border: 5px solid #3e3f40;
   background-color: #549584;
   border-radius: 15%;
-  box-shadow: 0 .9rem #3e3f40;
   animation: blinkbg 1s linear infinite;
 }
 
@@ -352,11 +352,10 @@ p {
   border: 5px solid #3e3f40;
   background-color: #549584;
   border-radius: 15%;
-  box-shadow: 0 .9rem #3e3f40;
   animation: blinkbg 1s linear infinite;
 }
 
-@keyframes blinkbg {
+/*@keyframes blinkbg {
 
   0%,
   100% {
@@ -369,28 +368,42 @@ p {
     border: 5px solid white;
   }
 }
-
+*/
 
 #controls {
   width: 100%;
-  height: 34%;
+  height: 40%;
   display: flex;
 
 }
 
 #all_controls {
-  width: 74%;
+  width: 77%;
   height: 100%;
 }
 
 #control_title {
+  padding-right: 2%;
+  padding-left: 2%;
   background-color: #3e3f40;
-  width: 100%;
+  width: 96%;
   height: 40%;
   display: flex;
-  justify-content: center;
   border-radius: 5%;
-  box-shadow: 0 .9rem #624321;
+  box-shadow: 0 .9rem #3e3f40;
+  align-items: left;
+  justify-content: space-between;
+}
+
+#credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9c22e;
+  border-radius: 30%;
+  height: 30%;
+  width: 20%;
+  opacity: 0.75;
 }
 
 #control_title h1 {
@@ -412,6 +425,56 @@ p {
   }
 }
 
+#banner_outline {
+  position: absolute;
+  display: flex;
+  width: 14%;
+  height: 30%;
+  right: 54%;
+}
+
+#banner_outline1 {
+  position: absolute;
+  display: flex;
+  width: 13%;
+  height: 30%;
+  right: 34%;
+}
+#banner_outline2 {
+  position: absolute;
+  display: flex;
+  width: 13%;
+  height: 30%;
+  right: 24%;
+}
+#banner_outline3 {
+  position: absolute;
+  display: flex;
+  width: 13%;
+  height: 30%;
+  right: 44%;
+}
+#banner_outline4 {
+  position: absolute;
+  display: flex;
+  width: 13%;
+  height: 30%;
+  right: 64%;
+}
+#banner_outline5 {
+  position: absolute;
+  display: flex;
+  width: 13%;
+  height: 30%;
+  right: 74%;
+}
+#banner_outline6 {
+  position: absolute;
+  display: flex;
+  width: 13%;
+  height: 30%;
+  right: 84%;
+}
 
 #control_buttons {
   display: flex;
@@ -451,22 +514,13 @@ p {
   background-color: #904a00;
 }
 
-#play {
-  background-color: #3e3f40;
-  border: 3px solid #3e3f40;
-  width: 24%;
-  height: 100%;
-  margin-left: .5%;
-  border-radius: 10%;
-  box-shadow: 0 .9rem #624321;
-}
-
 #play_button {
   display: flex;
+  align-content: center;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 70%;
+  width: 10%;
+  height: 19.5%;
   border-radius: 100%;
   opacity: 0.95;
   margin-left: 20%;
@@ -478,11 +532,15 @@ p {
   box-shadow: 0 .6em #624321;
   cursor: pointer;
   border: none;
-  position: relative;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   border-radius: 50%;
+  font-size: larger;
+  z-index: 10;
+  position: absolute;
+  right: 7%;
+  bottom: 10.5%;
 }
 
 #play_button:hover {
@@ -495,17 +553,11 @@ p {
   background-color: #d9c22e;
 }
 
-
-a { 
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-a img {
-    image-rendering: pixelated;
-    height: 80%;
-    width: 80%;
+#spin_border {
+  width: 20%;
+  height: 35%;
+  z-index: 1;
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
 }
