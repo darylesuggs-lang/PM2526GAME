@@ -1,10 +1,16 @@
-import { stats } from "./stats_manager.js";  
+import { stats } from "./stats.js";  
+
+/*
+    HOW TO USE: import this in main.js and nowhere else.
+    Place all event listeners in this file and import their respective things that they will trigger.
+*/
+
 
 /*
 
 Add a event listener for each stat in the stats object and make sure the names are the same.
 
-Template for the event listener is below:
+Stat template event listener is below:
 
 document.addEventListener("event_name", (event) => {
     if (event.detail.value < 0) {

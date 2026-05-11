@@ -2,6 +2,7 @@ import {character_files} from "./characters.js";
 import {SceneManager} from "./scene_manager.js";
 import {character_container, dialogue_manager} from "./globals.js";
 import {dialogue_list} from "./dialogue.js";
+import "./events.js"
 
 
 async function main() { 
