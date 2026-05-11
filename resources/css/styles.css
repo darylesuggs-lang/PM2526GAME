@@ -23,6 +23,9 @@
     transform: translate(-50%, 0);
     transition: bottom 1s ease-in-out;
 }
+.dialogue_box.active {
+    bottom: 1rem;
+}
 .dialogue_box .portrait {
     width: 15rem;
     height: 15rem;
@@ -76,7 +79,7 @@
 .dialogue_box .options {
     display: flex;
     position: absolute;
-    bottom: 0;
+    bottom: -100%;
     right: 0;
     width: fit-content;
     max-width: 15vw;
@@ -86,6 +89,9 @@
     padding-bottom: 0;
     transform: translate(100%, 0);
     transition: bottom 1s ease-in-out;
+}
+.dialogue_box .options.active {
+    bottom: 0;
 }
 .dialogue_box .options .option_button {
     font-family: var(--dialogue-text-font);
@@ -117,4 +123,49 @@
     width: 20rem;
     height: 20rem;
     transform: translate(0,0);
+}
+
+
+/* Shop Styles */
+.shop {
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    z-index: 15;
+    top: 100%;
+    transition: top 1s ease-in-out;
+}
+.shop.active {
+    top: 0;
+}
+.shop h1 {
+    font-family: var(--dialogue-name-font);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 20%;
+    padding: 1rem;
+    text-align: center;
+    color: var(--dialogue-text-color);
+    border: var(--dialogue-border-color) 4px solid;
+    background-color: var(--dialogue-name-bg-color);
+    text-shadow: -1px 1px 0 var(--dialogue-text-shadow-color);
+}
+.shop .exit_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    font-family: var(--dialogue-text-font);
+    font-size: 2rem;
+    padding: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--dialogue-name-bg-color);
+    color: var(--dialogue-text-color);
+    border: var(--dialogue-border-color) 4px solid;
+    text-shadow: -1px 1px 0 var(--dialogue-text-shadow-color);
+    cursor: pointer;
 }

@@ -59,3 +59,22 @@ SceneManager.add_scene(new Scene("Yahu Intro", async () => {
     await yahu_moving_character.move_to('100vw', 'calc(40vh - 50%)', 2000);
     yahu_moving_character.hide();
 }));
+
+
+SceneManager.add_scene(new Scene("Shop", async () => {
+    const shop_gui = document.querySelector(".shop");
+    const exit_button = shop_gui.querySelector(".exit_button");
+
+    exit_button.addEventListener("click", () => {
+        SceneManager.change_scene();
+    });
+
+    shop_gui.style.display = "block";
+    requestAnimationFrame(() => {
+        shop_gui.offsetHeight; // forces reflow so the animation works
+        shop_gui.classList.add("active");
+    })
+}, () => {
+    const shop_gui = document.querySelector(".shop");
+    shop_gui.classList.remove("active");
+}))
