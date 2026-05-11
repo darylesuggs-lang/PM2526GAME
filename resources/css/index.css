@@ -390,7 +390,7 @@ p {
   height: 40%;
   display: flex;
   border-radius: 5%;
-  box-shadow: 0 .9rem #624321;
+  box-shadow: 0 .9rem #3e3f40;
   align-items: left;
   justify-content: space-between;
 }
@@ -428,10 +428,53 @@ p {
 #banner_outline {
   position: absolute;
   display: flex;
-  width: 90%;
+  width: 14%;
   height: 30%;
+  right: 54%;
 }
 
+#banner_outline1 {
+  position: absolute;
+  display: flex;
+  width: 13%;
+  height: 30%;
+  right: 34%;
+}
+#banner_outline2 {
+  position: absolute;
+  display: flex;
+  width: 13%;
+  height: 30%;
+  right: 24%;
+}
+#banner_outline3 {
+  position: absolute;
+  display: flex;
+  width: 13%;
+  height: 30%;
+  right: 44%;
+}
+#banner_outline4 {
+  position: absolute;
+  display: flex;
+  width: 13%;
+  height: 30%;
+  right: 64%;
+}
+#banner_outline5 {
+  position: absolute;
+  display: flex;
+  width: 13%;
+  height: 30%;
+  right: 74%;
+}
+#banner_outline6 {
+  position: absolute;
+  display: flex;
+  width: 13%;
+  height: 30%;
+  right: 84%;
+}
 
 #control_buttons {
   display: flex;
