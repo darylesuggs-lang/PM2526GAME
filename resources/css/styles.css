@@ -6,11 +6,23 @@
     --dialogue-text-shadow-color: #ff9ac8;
     --dialogue-image-background-color: #e6f7ff;
 
+    --game-over-background-color: #000;
+    --game-over-text-color: #a00000;
+
     --dialogue-portrait-border-size: 8px;
     --dialogue-gap: 0.5rem;
 
     --dialogue-name-font: 'Pixelify Sans', serif;
     --dialogue-text-font: 'Pixelify Sans', sans-serif;
+    --game-over-font: 'Pixelify Sans', serif;
+}
+
+/* General Styles */
+.invisible {
+    opacity: 0;
+}
+.hidden {
+    display: none;
 }
 
 /* Dialogue box styles */
@@ -168,4 +180,28 @@
     border: var(--dialogue-border-color) 4px solid;
     text-shadow: -1px 1px 0 var(--dialogue-text-shadow-color);
     cursor: pointer;
+}
+
+
+/* Game Over Screen Styles */
+.game_over {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    background-color: var(--game-over-background-color);
+    z-index: 100;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+}
+.game_over.active {
+    display: flex;
+}
+.game_over h1 {
+    color: var(--game-over-text-color);
+    font-family: var(--game-over-font);
+    font-weight: 1000;
+    font-size: 10vw;
 }
