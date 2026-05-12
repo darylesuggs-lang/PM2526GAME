@@ -13,6 +13,14 @@
     --dialogue-text-font: 'Pixelify Sans', sans-serif;
 }
 
+/* General Styles */
+.invisible {
+    opacity: 0;
+}
+.hidden {
+    display: none;
+}
+
 /* Dialogue box styles */
 .dialogue_box {
     position: fixed;

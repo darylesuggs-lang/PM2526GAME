@@ -31,12 +31,15 @@ SceneManager.add_scene(new Scene("Yahu Intro", async () => {
     const yahu_intro_dialogue = dialogue_manager.get_dialogue("yahu_intro_dialogue");
     const yahu_moving_character = benjamin_netanyahu.moving_character;
 
+    // everything in here runs behind the fade
+    // acts as a loading screen
     await SceneTools.transition_fade(1000, 500, () => {
         document.body.style.backgroundImage = "url('./resources/images/office.jpg')";
         document.body.style.backgroundSize = "cover";
         document.styleSheets[0].insertRule('.menu_circle { display: none; }', 0);
         document.styleSheets[0].insertRule('.dust_circle { display: block; }', 0);
-        document.querySelector('.linear_effect').style.display = 'none';
+        document.querySelector('.linear_effect').style.display = 'none'
+        document.getElementById('line_effect').style.display = 'none'
 
         // set a timeout to fade in the light rays after 1 second
         setTimeout(() => {
@@ -58,6 +61,7 @@ SceneManager.add_scene(new Scene("Yahu Intro", async () => {
     await yahu_dialogue_box.conversation(yahu_intro_dialogue);
     await yahu_moving_character.move_to('100vw', 'calc(40vh - 50%)', 2000);
     yahu_moving_character.hide();
+    SceneManager.change_scene(SceneManager.get_scene('Shop'))
 }));
 
 
