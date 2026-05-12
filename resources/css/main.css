@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'Jack Of Gears';
+    src: url('../fonts/jackofgears/jack_of_gears.woff2') format('woff2'),
+        url('../fonts/jackofgears/jack_of_gears.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: #f6e1b5;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#frame {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 6.7rem;
+    color: #936535;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    font-family: Jack Of Gears, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#game_area_main {
+    width: 100%;
+    height: 89%;
+
+    display: flex;
+    z-index: 10;
+}
+
+#game_area1 {
+    width: 5%;
+    height: 100%;
+
+
+}
+
+#game_area2 {
+    width: 89%;
+    height: 100%;
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#game_area3 {
+    width: 5%;
+    height: 100%;
+
+}
+
+#main_game_bg_area {
+    width: 74%;
+    height: 59%;
+  
+}
+
+#stat_area {
+    width: 25%;
+    height: 59%;
+   
+}
+
+#dialog_area {
+    width: 74%;
+    height: 40%;
+    
+}
+
+#options_area {
+    width: 25%;
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+#chrarea {
+    height: 100%;
+    width: 25%;
+    display: flex;
+
+}
+
+#steamframe {
+    position: absolute;
+    height: 25%;
+    width: 15%;
+    z-index: 10;
+    left: 6%;
+    bottom: 3%;
+}
+
+#character {
+    position: absolute;
+    height: 20%;
+    width: 10%;
+    left: 8%;
+    bottom: 5%;
+    z-index: 5;
+}
+
+#chrbg {
+    position: absolute;
+    height: 21%;
+    width: 12%;
+    left: 7%;
+    bottom: 4%;
+    z-index: 4;
+    background-color: #936535;
+    border-radius: 9%;
+}
+
+#name {
+    background-image: url("../images/namebackplate.png");
+    background-size: 100% 100%;
+    width: 15%;
+    height: 5%;
+    position: absolute;
+    left: 21%;
+    bottom: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#name h2{
+font-family: IM Fell English SC, Georgia;
+color: #f6e1b5;
+
+}
+
+#dialogue {
+    background-image: url("../images/parchmentdialogue.png");
+    background-size: 100% 100%;
+    width: 35%;
+    height: 20%;
+    position: absolute;
+    left: 21%;
+    bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    color: #3e3f40;
+}
+
+#dialogueFilter {
+    background-color: hsl(40.62deg 78.31% 83.73% / 29%);
+    width: 84%;
+    height: 80%;
+    position: absolute;
+    left: 7%;
+    bottom: 10%;
+    border-radius: 20px;
+    font-size: 1.5em;
+    font-weight: bolder;
+
+}
+
+#optframe{
+    position: absolute;
+    height: 44%;
+    width: 28%;
+    bottom: -5%;
+    right: 3%;
+}
+
+.option_button{
+    height: 15%;
+    width: 65%;
+    margin-left: 15%;
+    margin-right: 15%;
+    color:#3e3f40;
+    background-color: #936535;
+    font-size: 200%;
+    padding: 8% 51%;
+    border-radius: 1rem;
+    font-family: "IM Fell English";
+    box-shadow: 0 .9rem  #624321;
+    cursor: pointer;
+    border: none;
+}
+
+.option_area_button {
+    margin-left: 16%;
+    height: 14%;
+    width: 73%;
+    margin-top: -10%;
+}
+
+#first_option {
+    margin-top: 6%;
+    
+}
