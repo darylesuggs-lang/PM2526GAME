@@ -1,0 +1,387 @@
+body{
+    margin: 0;
+    background: #0084ff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ground{
+    color:green;
+    width:100%
+    
+}
+.hell{
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+.star{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #b47d2ac0, transparent);
+}
+.star1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 174, 0, 0.445);
+    border-radius: 50%;
+    top: 20%;
+    left: 50%;
+    box-shadow:0 0 10px 2px rgba(233, 157, 157, 0.397);
+    animation: twinkle 1s infinite alternate;
+    
+}
+.mountain{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     background: radial-gradient(circle, #fade3de1, transparent);
+    
+}
+.mountain1{
+    
+   position:relative ;
+    bottom:170px;
+    
+  width: 0px;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 800px solid rgb(75, 70, 70);
+    background: radial-gradient(circle, #00000000, transparent);
+    opacity: 0.7;
+}
+.hll{
+   display: flex;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.fire-cin{
+    
+    position: relative;
+    width: 100px;
+    height: 300px;
+}
+
+
+.fire{
+    position: absolute;
+    bottom:0;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 400px solid rgb(56, 110, 46);
+    background: radial-gradient(circle, #3f42f041, transparent);
+    opacity: 0.7;
+    animation: fl3icker 1s infinite alternate;
+    filter:blur(2px);
+    transform-origin: bottom center;
+    will-change:transform,opacity;
+
+}
+
+.fireM{
+    position: absolute;
+    
+      width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 350px solid rgba(60, 145, 43, 0.801);
+    bottom:5%;
+    left:1.9em;
+    animation-delay: -0.05s;
+     background: radial-gradient(circle, #3f42f041, transparent);
+     animation: fl2icker 1s infinite alternate;
+     
+}
+
+
+.fireS{
+    position: absolute;
+        width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 250px solid rgba(57, 112, 12, 0.877);
+    bottom:5%;
+    left:1.9em;
+    animation-delay: -0.1s;
+     background: radial-gradient(circle, #3f42f041, transparent);
+     animation: flicker 1 infinite alternate;
+}
+.fire1{
+    position: absolute;
+    bottom:0;
+  width: 0;
+  height: 0;
+  border-left: 1
+  00px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 350px solid rgb(56, 110, 46);
+    background: radial-gradient(circle, #3f42f041, transparent);
+    opacity: 0.7;
+    animation: fl3icker 1s infinite alternate;
+    filter:blur(2px);
+    transform-origin: bottom center;
+    will-change:transform,opacity;
+
+}
+
+.fireM1{
+    position: absolute;
+        width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 300px solid rgba(60, 145, 43, 0.801);
+    bottom:5%;
+    left:1.9em;
+    animation-delay: -0.05s;
+     background: radial-gradient(circle, #3f42f041, transparent);
+     animation: fl2icker 1.0s infinite alternate;
+     
+}
+
+
+.fireS1{
+    position: absolute;
+         width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 250px solid rgba(29, 61, 3, 0.877);
+    bottom:5%;
+    left:1.9em;
+    animation-delay: -0.1s;
+    left:1.9em;
+     background: radial-gradient(circle, #3f42f041, transparent);
+     animation: flicker 1.5s infinite alternate;
+}
+.fire2{
+    position: absolute;
+    bottom:0;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 400px solid rgb(56, 110, 46);
+    background: radial-gradient(circle, #3f42f041, transparent);
+    opacity: 0.7;
+    animation: fl3icker 1.5s infinite alternate;
+    filter:blur(2px);
+    transform-origin: bottom center;
+    will-change:transform,opacity;
+
+}
+
+.fireM2{
+    position: absolute;
+        width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 320px solid rgba(60, 145, 43, 0.801);
+    bottom:5%;
+    left:1.9em;
+    animation-delay: -0.05s;
+     background: radial-gradient(circle, #3f42f041, transparent);
+     animation: fl2icker 1.5s infinite alternate;
+     
+}
+
+
+.fireS2{
+    position: absolute;
+        width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 250px solid rgba(29, 61, 3, 0.877);
+    bottom:5%;
+    left:1.9em;
+    animation-delay: -0.1s;
+     background: radial-gradient(circle, #3f42f041, transparent);
+     animation: flicker 1.5s infinite alternate;
+}
+
+.fire3{
+    position: absolute;
+    bottom:0;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 500px solid rgb(56, 110, 46);
+    background: radial-gradient(circle, #3f42f041, transparent);
+    opacity: 0.7;
+    animation: fl3icker 1.5s infinite alternate;
+    filter:blur(2px);
+    transform-origin: bottom center;
+    will-change:transform,opacity;
+
+}
+
+.fireM3{
+    position: absolute;
+       width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 370px solid rgba(60, 145, 43, 0.801);
+    bottom:5%;
+    left:1.9em;
+    animation-delay: -0.05s;
+     background: radial-gradient(circle, #56fa35, transparent);
+     animation: fl2icker 1.5s infinite alternate;
+     
+}
+
+
+.fireS3{
+    position: absolute;
+        width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 250px solid rgba(29, 61, 3, 0.877);
+    bottom:5%;
+    left:1.9em;
+    animation-delay: -0.1s;
+     background: radial-gradient(circle, #1215c941, transparent);
+     animation: flicker 1.5s infinite alternate;
+}
+
+
+
+
+@keyframes flicker {
+    0%{
+       transform: scale(1.1) rotate(1deg) skew(1deg);
+    opacity: 0.8;
+
+    }
+    100%{
+        transform: scale(1.1) rotate(-1deg) skew(1deg);
+        opacity:.6;
+    }
+}
+@keyframes fl2icker {
+    0%{
+       transform: scale(1.1) rotate(-1deg) skew(1deg);
+    opacity: .8;
+
+    }
+    100%{
+        transform: scale(1.1) rotate(1deg) skew(1deg);
+        opacity: .6;
+    }
+}
+@keyframes fl3icker {
+    0%{
+       transform: scale(1.1) rotate(-1deg) skew(1deg);
+    opacity: .8;
+
+    }
+    100%{
+        transform: scale(1.1) rotate(2deg) skew(2deg);
+        opacity: .6;
+    }
+}
+
+
+.fireB{
+     position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+      
+        
+     
+        z-index: -1;
+}
+.fire-cin::before, .fire-cin::after{
+content:"";
+position: absolute;
+bottom: 0;
+width:20px;
+height: 30px;
+background:rgb(65, 45, 4);
+
+box-shadow:0 0 10px 2px rgb(85, 52, 2);
+animation:spark 4s infinite ease-in-out;
+}
+.fire-cin::before{
+    left: 20px;
+    
+    animation-delay: 1s;
+}
+.fire-cin::after{
+    right: 20px;
+    animation-delay: 0.4s;
+    
+}
+@keyframes spark {
+    0%{
+        transform:translateY(0) scale(.5);
+        opacity: .8;
+    }
+       100%{
+        transform:translateY(0) scale(.5);
+        opacity: 1;
+    }
+
+    
+}
+
+
+@media (max-width: 610px){
+  
+  .fire-cin{
+    width: 90rem;
+  }
+  .hll{
+    height:10px;
+  }
+  .hell{
+    width: 90%;
+  }
+    .mountain{
+    width:150em;
+    height:100em;
+
+  }
+}
+
+
+@media (min-width:400px ){
+  
+  .fire-cin{
+    width: 50px;
+  }
+ 
+  .hell{
+    width: 81%;
+  }
+  .mountain{
+    width:110em;
+    height:100em;
+
+  }
+}
