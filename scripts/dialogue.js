@@ -97,8 +97,7 @@ class Dialogue {
                 }
                 window.requestAnimationFrame(() => {
                     this._dialogue_box.offsetHeight; // forces reflow so the animation works
-                    this._dialogue_box.style.bottom = "1rem";
-                    this._options_menu.style.bottom = "-100%";
+                    this._dialogue_box.classList.add("active");
                 })
 
                 // second timeout resolves promise after animation finishes
@@ -114,8 +113,7 @@ class Dialogue {
             if (this._is_debug) {
                 console.log("hiding dialogue box");
             }
-            this._dialogue_box.style.bottom = "-100%";
-            this._options_menu.style.bottom = "0";
+            this._dialogue_box.classList.remove("active");
 
             // timeout to hide the box after the animation finishes
             setTimeout(() => {
@@ -181,7 +179,7 @@ class Dialogue {
 
                                     window.requestAnimationFrame(() => {
                                         this._dialogue_box.offsetHeight; // forces reflow so the animation works
-                                        this._options_menu.style.bottom = "-100%";
+                                        this._options_menu.classList.remove("active");
                                     });
                                     resolve(i);
 
@@ -197,7 +195,7 @@ class Dialogue {
                             // animates the options menu sliding up from bottom
                             window.requestAnimationFrame(() => {
                                 this._dialogue_box.offsetHeight; // forces reflow so the animation works
-                                this._options_menu.style.bottom = "0%";
+                                this._options_menu.classList.add("active");
                             });
                         }, end_delay);
                     }
