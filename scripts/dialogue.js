@@ -1,3 +1,4 @@
+import { stats } from "./stats.js";
 const template_dialogue_box = document.getElementsByClassName('dialogue_box')[0];
 
 // every added dialogue json needs to be in here
@@ -69,10 +70,11 @@ class DialogueManager {
 }
 
 class Dialogue {
-    constructor(name, image, is_debug = false) {
+    constructor(name, image, is_debug = false, character_class) {
         this._is_debug = is_debug;
         this._name = name;
         this._image = image;
+        this._character = character_class
         this._dialogue_box = template_dialogue_box.cloneNode(true);
         this._dialogue_box.id = name + "_dialogue_box";
         this._dialogue_box.querySelector(".portrait img").src = image;
@@ -241,7 +243,19 @@ class Dialogue {
 
                     // if there were options and there is a response for the chosen option, show it
                     if (choice !== undefined && dialogue.options[choice].response) {
-                        await this.reveal_text(dialogue.options[choice].response, text_speed, [], 0);
+                        await this.reveal_text(dialogue.options[choice].response, text_speed, [], 0); 
+                    }
+
+                    if (choice !== undefined && dialogue.options[choice].stats_impact) {
+                        let keys = Object.keys(dialogue.options[choice].stats_impact);
+                        let values = Object.values(dialogue.options[choice].stats_impact);
+
+                        console.log(keys);
+                        console.log(values);
+
+                        keys.forEach(stat => {
+                            stats[stat].value = stats[stat].value + values[keys.indexOf(stat)];
+                        });
                     }
                 } 
                 // if there is no prompt but there are options, we still want to show the options menu
