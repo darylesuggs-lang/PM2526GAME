@@ -251,7 +251,18 @@ class Dialogue {
                         let values = Object.values(dialogue.options[choice].stats_impact);
 
                         keys.forEach(stat => {
+                            // updates stats based on the stats_impact object in the dialogue json for that option
                             stats[stat].value = stats[stat].value + values[keys.indexOf(stat)];
+                        });
+                    }
+
+                    if (choice !== undefined && dialogue.options[choice].character_love_impact) {
+                        let keys = Object.keys(dialogue.options[choice].character_love_impact); 
+                        let values = Object.values(dialogue.options[choice].character_love_impact);
+
+                        keys.forEach(character => {
+                            // updates character love based on the character_love_impact object in the dialogue json for that option
+                            characters[character].love = characters[character].love + values[keys.indexOf(character)];
                         });
                     }
                 } 
