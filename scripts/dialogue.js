@@ -248,6 +248,7 @@ class Dialogue {
                         await this.reveal_text(dialogue.options[choice].response, text_speed, [], 0); 
                     }
 
+                    // if there are stats impacts for the chosen option, update stats accordingly
                     if (choice !== undefined && dialogue.options[choice].stats_impact) {
                         let keys = Object.keys(dialogue.options[choice].stats_impact);
                         let values = Object.values(dialogue.options[choice].stats_impact);
@@ -255,9 +256,11 @@ class Dialogue {
                         keys.forEach(stat => {
                             // updates stats based on the stats_impact object in the dialogue json for that option
                             stats[stat].value = stats[stat].value + values[keys.indexOf(stat)];
+                            console.log(stats[stat].value);
                         });
                     }
 
+                    // if there are character love impacts for the chosen option, update character love accordingly
                     if (choice !== undefined && dialogue.options[choice].character_love_impact) {
                         let keys = Object.keys(dialogue.options[choice].character_love_impact);
                         let values = Object.values(dialogue.options[choice].character_love_impact);
@@ -265,6 +268,7 @@ class Dialogue {
                         keys.forEach(character => {
                             // updates character love based on the character_love_impact object in the dialogue json for that option
                             character_container.get_character(character).love = character_container.get_character(character).love + values[keys.indexOf(character)];
+                            console.log(character + " love: " + character_container.get_character(character).love);
                         });
                     }
                 } 
@@ -276,6 +280,30 @@ class Dialogue {
                     // if there is a response for the chosen option, show it
                     if (dialogue.options[choice].response) {
                         await this.reveal_text(dialogue.options[choice].response, text_speed, [], 1000);
+                    }
+
+                    // if there are stats impacts for the chosen option, update stats accordingly
+                    if (choice !== undefined && dialogue.options[choice].stats_impact) {
+                        let keys = Object.keys(dialogue.options[choice].stats_impact);
+                        let values = Object.values(dialogue.options[choice].stats_impact);
+
+                        keys.forEach(stat => {
+                            // updates stats based on the stats_impact object in the dialogue json for that option
+                            stats[stat].value = stats[stat].value + values[keys.indexOf(stat)];
+                            console.log(stats[stat].value);
+                        });
+                    }
+
+                    // if there are character love impacts for the chosen option, update character love accordingly
+                    if (choice !== undefined && dialogue.options[choice].character_love_impact) {
+                        let keys = Object.keys(dialogue.options[choice].character_love_impact);
+                        let values = Object.values(dialogue.options[choice].character_love_impact);
+
+                        keys.forEach(character => {
+                            // updates character love based on the character_love_impact object in the dialogue json for that option
+                            character_container.get_character(character).love = character_container.get_character(character).love + values[keys.indexOf(character)];
+                            console.log(character + " love: " + character_container.get_character(character).love);
+                        });
                     }
                 }
             }
@@ -289,6 +317,8 @@ class Dialogue {
             }
         });
     }
+
+    
 }
 
 export {
