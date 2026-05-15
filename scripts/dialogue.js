@@ -1,4 +1,6 @@
 import { stats } from "./stats.js";
+import { character_container } from "./globals.js";
+
 const template_dialogue_box = document.getElementsByClassName('dialogue_box')[0];
 
 // every added dialogue json needs to be in here
@@ -257,12 +259,12 @@ class Dialogue {
                     }
 
                     if (choice !== undefined && dialogue.options[choice].character_love_impact) {
-                        let keys = Object.keys(dialogue.options[choice].character_love_impact); 
+                        let keys = Object.keys(dialogue.options[choice].character_love_impact);
                         let values = Object.values(dialogue.options[choice].character_love_impact);
 
                         keys.forEach(character => {
                             // updates character love based on the character_love_impact object in the dialogue json for that option
-                            characters[character].love = characters[character].love + values[keys.indexOf(character)];
+                            character_container.get_character(character).love = character_container.get_character(character).love + values[keys.indexOf(character)];
                         });
                     }
                 } 
