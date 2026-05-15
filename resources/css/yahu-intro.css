@@ -1,5 +1,6 @@
 .light-rays {
     opacity: 0%;
+    display: none;
     position: fixed;
     top: -50%;
     left: -30%;
@@ -19,19 +20,24 @@
     filter: blur(20%);
     mix-blend-mode: screen;
 
+    transition: opacity 2s linear;
     transform: skewX(-25deg);
-    animation: waveLight 8s ease-in-out infinite alternate;
-    transition: opacity 3s linear;
 }
 
 @keyframes waveLight {
     0% {
+        opacity: 0.2;
         transform: skewX(-25deg) translateX(-40px);
     }
 
     100% {
+        opacity: 0.8;
         transform: skewX(-22deg) translateX(40px);
     }
+}
+.light-rays.active {
+    display: block;
+    animation: waveLight 8s ease-in-out infinite alternate;
 }
 
 

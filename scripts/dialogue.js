@@ -1,3 +1,6 @@
+import { stats } from "./stats.js";
+import { character_container } from "./globals.js";
+
 const template_dialogue_box = document.getElementsByClassName('dialogue_box')[0];
 
 // every added dialogue json needs to be in here
@@ -69,10 +72,11 @@ class DialogueManager {
 }
 
 class Dialogue {
-    constructor(name, image, is_debug = false) {
+    constructor(name, image, is_debug = false, character_class) {
         this._is_debug = is_debug;
         this._name = name;
         this._image = image;
+        this._character = character_class
         this._dialogue_box = template_dialogue_box.cloneNode(true);
         this._dialogue_box.id = name + "_dialogue_box";
         this._dialogue_box.querySelector(".portrait img").src = image;
@@ -95,8 +99,7 @@ class Dialogue {
                 }
                 window.requestAnimationFrame(() => {
                     this._dialogue_box.offsetHeight; // forces reflow so the animation works
-                    this._dialogue_box.style.bottom = "1rem";
-                    this._options_menu.style.bottom = "-100%";
+                    this._dialogue_box.classList.add("active");
                 })
 
                 // second timeout resolves promise after animation finishes
@@ -112,8 +115,7 @@ class Dialogue {
             if (this._is_debug) {
                 console.log("hiding dialogue box");
             }
-            this._dialogue_box.style.bottom = "-100%";
-            this._options_menu.style.bottom = "0";
+            this._dialogue_box.classList.remove("active");
 
             // timeout to hide the box after the animation finishes
             setTimeout(() => {
@@ -179,7 +181,7 @@ class Dialogue {
 
                                     window.requestAnimationFrame(() => {
                                         this._dialogue_box.offsetHeight; // forces reflow so the animation works
-                                        this._options_menu.style.bottom = "-100%";
+                                        this._options_menu.classList.remove("active");
                                     });
                                     resolve(i);
 
@@ -195,7 +197,7 @@ class Dialogue {
                             // animates the options menu sliding up from bottom
                             window.requestAnimationFrame(() => {
                                 this._dialogue_box.offsetHeight; // forces reflow so the animation works
-                                this._options_menu.style.bottom = "0%";
+                                this._options_menu.classList.add("active");
                             });
                         }, end_delay);
                     }
@@ -243,7 +245,27 @@ class Dialogue {
 
                     // if there were options and there is a response for the chosen option, show it
                     if (choice !== undefined && dialogue.options[choice].response) {
-                        await this.reveal_text(dialogue.options[choice].response, text_speed, [], 0);
+                        await this.reveal_text(dialogue.options[choice].response, text_speed, [], 0); 
+                    }
+
+                    if (choice !== undefined && dialogue.options[choice].stats_impact) {
+                        let keys = Object.keys(dialogue.options[choice].stats_impact);
+                        let values = Object.values(dialogue.options[choice].stats_impact);
+
+                        keys.forEach(stat => {
+                            // updates stats based on the stats_impact object in the dialogue json for that option
+                            stats[stat].value = stats[stat].value + values[keys.indexOf(stat)];
+                        });
+                    }
+
+                    if (choice !== undefined && dialogue.options[choice].character_love_impact) {
+                        let keys = Object.keys(dialogue.options[choice].character_love_impact);
+                        let values = Object.values(dialogue.options[choice].character_love_impact);
+
+                        keys.forEach(character => {
+                            // updates character love based on the character_love_impact object in the dialogue json for that option
+                            character_container.get_character(character).love = character_container.get_character(character).love + values[keys.indexOf(character)];
+                        });
                     }
                 } 
                 // if there is no prompt but there are options, we still want to show the options menu

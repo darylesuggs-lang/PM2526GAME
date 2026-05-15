@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(25, 16, 97);
+
+}
+.pedals{
+    background-color: rgba(235, 185, 235, 0.164);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width:10rem;
+    border: 1px solid rgba(255, 255, 255, 0.116);
+   border-radius: 100%;
+
+}
+/*
+Source - https://stackoverflow.com/q/69205595
+Posted by JamalDols, modified by community. See post 'Timeline' for change history
+Retrieved 2026-04-24, License - CC BY-SA 4.0
+*/
+
+.items--cloud {
+  position: relative;
+  height: 400px;
+  width: 500px;
+  background: #333;
+}
+
+[data-item] {
+  position: absolute;
+  transform: translate3d(var(--x), var(--y), 0);
+}
+
+.position-1 {
+  right: 0%; top: 40%;
+}
+
+.position-2 {
+  right: 53%;top: 28%;
+}
+
+.position-3 {
+  right: 39%;top: 4%;
+}
+
+.position-4 {
+  right: 79%;top: 26%;
+}

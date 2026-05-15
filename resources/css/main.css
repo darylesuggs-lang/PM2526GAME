@@ -44,7 +44,7 @@ header h1 {
 }
 
 #game1 {
-    display: flex;
+    display: none;
 }
 
 #game_area_main {
@@ -81,8 +81,7 @@ header h1 {
 #main_game {
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: none;
 }
 
 #main_game_bg_area {
@@ -108,11 +107,7 @@ header h1 {
     height: 40%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-between;
-    padding-top: 1.5%;
-    padding-bottom: 16%;
-    max-height: 25vh;
+
 }
 
 #chrarea {
@@ -209,7 +204,7 @@ header h1 {
 
 .option_button {
     height: 15%;
-    width: 35%;
+    width: 65%;
     margin-left: 15%;
     margin-right: 15%;
     color: #3e3f40;
@@ -224,30 +219,22 @@ header h1 {
 }
 
 .option_area_button {
-    margin-left: 10%;
-    height: 18%;
-    width: 75%;
-    color: #3e3f40;
-    background-color: #936535;
-    font-size: 200%;
-    border-radius: 1rem;
-    font-family: "IM Fell English";
-    box-shadow: 0 .9rem #624321;
-    cursor: pointer;
-    border: none;
-    z-index: 40;
-
+    margin-left: 16%;
+    height: 14%;
+    width: 73%;
+    margin-top: -10%;
 }
 
+#first_option {
+    margin-top: 6%;
+
+}
 
 /*7532*/
 /*Slot Machine System*/
-#lotto1 {
-    display: none;
-}
+#lotto1 {}
 
 #slot_machine {
-    display: none;
     flex-wrap: wrap;
     width: 100vw;
     height: 100vh;
@@ -506,9 +493,9 @@ header h1 {
 #banner_outline2 {
     position: absolute;
     display: flex;
-    width: 11%;
+    width: 13%;
     height: 30%;
-    right: 26%;
+    right: 24%;
     margin-bottom: 6%;
 }
 
@@ -542,7 +529,7 @@ header h1 {
 #banner_outline6 {
     position: absolute;
     display: flex;
-    width: 11%;
+    width: 13%;
     height: 30%;
     right: 84%;
     margin-bottom: 6%;
@@ -573,7 +560,6 @@ header h1 {
     cursor: pointer;
     border: none;
     margin-bottom: 10%;
-    z-index: 50;
 }
 
 #control_buttons button:hover {
@@ -588,19 +574,17 @@ header h1 {
     background-color: #904a00;
 }
 
-#all {
-    display: none;
-}
-
 #play_button {
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
-    width: 9%;
-    height: 17.5%;
+    width: 10%;
+    height: 19.5%;
     border-radius: 100%;
     opacity: 0.95;
+    margin-left: 20%;
+    margin-top: 3%;
     color: #3e3f40;
     background-color: #936535;
     font-size: 250%;
@@ -615,8 +599,7 @@ header h1 {
     font-size: larger;
     z-index: 10;
     position: absolute;
-    right: 11.5%;
-    bottom: 5%;
+    right: 7%;
 
 }
 
@@ -635,8 +618,7 @@ header h1 {
     height: 35%;
     z-index: 1;
     position: absolute;
-    right: 6%;
-    bottom: -4%;
+    right: 2.5%;
 }
 
 /*Shop Sytem*/
@@ -814,250 +796,4 @@ p {
     transform: translateY(5px);
     color: #f6e1b5;
     background-color: #904a00;
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-    #options_area {
-        padding-top: 5%;
-        padding-bottom: 16%;
-    }
-
-    header h1 {
-        font-size: 2.7rem;
-        text-align: center;
-        width: 36%;
-        margin-bottom: -18px;
-    }
-
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    #lotto1 {
-        font-size: 4.7rem;
-        margin-top: 2%;
-    }
-
-    #options_area {
-        padding-top: 8%;
-        padding-bottom: 16%;
-    }
-
-    header h1 {
-        font-size: 1.7rem;
-        text-align: center;
-        width: 33%;
-        margin-bottom: -33px;
-    }
-}
-
-@media (min-width: 426px) and (max-width: 768px) {
-    #lotto1 {
-        font-size: 3.7rem;
-        margin-top: 2%;
-    }
-
-    #play_button h1 {
-        font-size: 1.3rem;
-        font-weight: 900;
-    }
-
-    .winner1 {
-        height: 80%;
-        width: 25%;
-    }
-
-    #options_area {
-        padding-top: 11.5%;
-        padding-bottom: 16%;
-    }
-}
-
-
-
-@media (max-width: 425px) {
-    #main_screen {
-        margin-top: 9%;
-    }
-
-    #payout h2 {
-        font-size: 100%;
-    }
-
-    #spinners {
-
-        align-content: space-evenly;
-    }
-
-    #lotto1 {
-        font-size: 2.2rem;
-        margin-top: 3%;
-    }
-
-    #play_button h1 {
-        font-size: 1.3rem;
-        font-weight: 900;
-    }
-
-    .winner1 {
-        height: 80%;
-        width: 25%;
-    }
-
-    #wins3 {
-        height: 20%;
-    }
-
-    .winner2 {
-        height: 45%;
-        width: 23%;
-    }
-
-    .winner3 {
-        height: 31%;
-        width: 23%;
-    }
-
-    .wins {
-        border: none;
-    }
-
-    .wins2 {
-        height: 28%;
-        border: none;
-    }
-
-    #wins5 h5 {
-        font-size: .6em;
-        font-weight: 800;
-    }
-
-    .spinner_image {
-        height: 23%;
-        width: 28%;
-    }
-
-    #all_controls {
-        width: 60%;
-    }
-
-    #controls {
-
-        height: 30%;
-    }
-
-    #banner_outline {
-        display: none;
-    }
-
-    #banner_outline1 {
-        display: none;
-    }
-
-    #banner_outline2 {
-        display: none;
-    }
-
-    #banner_outline3 {
-        display: none;
-    }
-
-    #banner_outline4 {
-        display: none;
-    }
-
-    #banner_outline5 {
-        display: none;
-    }
-
-    #banner_outline6 {
-        display: none;
-    }
-
-    #control_buttons button {
-        width: 35%;
-        height: 15%;
-    }
-
-    #control_buttons {
-        flex-wrap: wrap;
-    }
-
-    #bet_all {
-        display: none;
-    }
-
-    #all {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-    }
-
-    #control_title h1 {
-        font-size: 250%;
-    }
-
-    #credits h2 {
-        font-size: .9rem;
-    }
-
-    #credits {
-        width: 35%;
-    }
-
-    #spin_border {
-        width: 36%;
-        bottom: -2%;
-    }
-
-    #play_button {
-        width: 18%;
-        right: 14.5%;
-        bottom: 7.5%;
-    }
-
-    #options_area {
-        padding-top: 21.5%;
-        padding-bottom: 16%;
-    }
-}
-
-@media (min-width: 321px) and (max-width: 375px) {
-    #lotto1 {
-        font-size: 1.8em;
-        margin-top: 11%;
-    }
-
-    #options_area {
-        padding-top: 28.5%;
-        padding-bottom: 16%;
-    }
-}
-
-@media (max-width: 320px) {
-    #lotto1 {
-        font-size: 1.6em;
-        margin-top: 11%;
-    }
-
-    .spinner_image {
-        width: 26%;
-    }
-
-    .winner3 {
-        height: 17%;
-        width: 17%;
-    }
-
-    #options_area {
-        padding-top: 28.5%;
-        padding-bottom: 16%;
-    }
-
-    #optframe {
-        position: absolute;
-        height: 44%;
-        width: 28%;
-        bottom: -5%;
-        right: 3%;
-    }
 }
