@@ -250,9 +250,6 @@ class Dialogue {
                         let keys = Object.keys(dialogue.options[choice].stats_impact);
                         let values = Object.values(dialogue.options[choice].stats_impact);
 
-                        console.log(keys);
-                        console.log(values);
-
                         keys.forEach(stat => {
                             stats[stat].value = stats[stat].value + values[keys.indexOf(stat)];
                         });
